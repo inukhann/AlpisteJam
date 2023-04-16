@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://deaj2dwrifxw5"]
+[gd_scene load_steps=4 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_0wvcd"]
+[ext_resource type="Texture2D" uid="uid://btqe87lbx6ewv" path="res://icon.svg" id="2_dreem"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
 
@@ -12,3 +13,9 @@ scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_668cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.1875, 0.296875)
+texture = ExtResource("2_dreem")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
