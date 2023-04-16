@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://deaj2dwrifxw5"]
+
+[ext_resource type="Script" path="res://scripts/spark.gd" id="1_0wvcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
+
+[node name="Spark" type="CharacterBody2D"]
+script = ExtResource("1_0wvcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_668cv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
