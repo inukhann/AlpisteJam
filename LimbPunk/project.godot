@@ -89,6 +89,11 @@ DETACH_LIMBS={
 2d_render/layer_3="Fase"
 2d_render/layer_4="FaseInimigos"
 2d_render/layer_5="Botões"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Inimigos"
+2d_physics/layer_3="Fase"
+2d_physics/layer_4="FaseInimigos"
+2d_physics/layer_5="Botões"
 
 [rendering]
 

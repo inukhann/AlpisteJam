@@ -84,6 +84,9 @@ func change_status():
 		detach_legs()
 	#aqui poderiamos fazer a mudança de sprite do char tbm
 	
+func shoot_bullet():
+	if can_shoot and Input.is_action_just_pressed("SHOOT"):
+	
 func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:
 		can_dash = true
