@@ -1,15 +1,10 @@
 extends CharacterBody2D
 
 
-
 var speed = 200
 var move_direction = 1
 var gravity = 3000
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+@onready var can_attack = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -27,9 +22,12 @@ func _process(_delta):
 		
 	velocity.normalized()
 	
-	move_and_slide()
+	if can_attack:
+		move_and_slide()
 	
 
-
 func _on_area_2d_body_entered(body):
-	body.gameover()
+	if body.get_path() == "res://scenes/Spark.tscn" and can_attack:
+		body.gameover()
+	elif body.get_path() == "res://scenes/Bullet.tscn":
+		can_attack = false
