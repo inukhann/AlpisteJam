@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://t7s02ar8rpmm"]
 
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="1_sejva"]
-[ext_resource type="PackedScene" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
+[ext_resource type="PackedScene" uid="uid://p0m5ch1kwnnr" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="3_msdtg"]
 [ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="4_mqudi"]
 
