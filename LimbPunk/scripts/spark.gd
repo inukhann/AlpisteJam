@@ -4,8 +4,8 @@ enum Status {
 	NORMAL, ARMLESS, LEGLESS, LIMBLESS, BODYLESS
 }
 
-const base_velocity_x = 150
-const base_velocity_y = 300
+const base_velocity_x = 180
+const base_velocity_y = 330
 const GRAVITY = 10
 @onready var on_cooldown = false
 @onready var can_shoot = true
