@@ -51,6 +51,11 @@ DETACH={
 2d_render/layer_2="Enemies"
 2d_render/layer_3="Walls"
 2d_render/layer_4="Buttons"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Fase"
+2d_physics/layer_3="Inimigos"
+2d_physics/layer_4="FaseInimigos"
+2d_physics/layer_5="Botão"
 
 [rendering]
 

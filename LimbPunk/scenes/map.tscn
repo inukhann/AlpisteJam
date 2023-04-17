@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dixdibb3jpbi5"]
 
 [ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/test_tile.png" id="1_hyvv6"]
-[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="2_0gj2e"]
+[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://Spark.tscn" id="2_0gj2e"]
 
 [node name="Map" type="Control"]
 layout_mode = 3
