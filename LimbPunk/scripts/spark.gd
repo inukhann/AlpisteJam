@@ -89,7 +89,6 @@ func change_status():
 func shoot_bullet():
 	if can_shoot and Input.is_action_just_pressed("SHOOT"):
 		var fired = bullet_instance.instantiate()
-		print("adieu")
 		get_parent().add_child(fired)
 		if fired.has_method("change_target"):
 			fired.change_target(get_global_mouse_position(), self.global_position)
