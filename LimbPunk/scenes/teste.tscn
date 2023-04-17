@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://t7s02ar8rpmm"]
+[gd_scene load_steps=5 format=3 uid="uid://t7s02ar8rpmm"]
 
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="1_7i37c"]
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="1_sejva"]
-[ext_resource type="PackedScene" uid="uid://ccvuulxlp1nav" path="res://scenes/cabeça.tscn" id="2_8wp4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebx7q"]
 size = Vector2(1170, 1)
@@ -51,6 +50,3 @@ collision_layer = 8
 position = Vector2(672, -60)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_qmpfl")
-
-[node name="Cabeça" parent="." instance=ExtResource("2_8wp4p")]
-position = Vector2(176, -54)

@@ -7,11 +7,9 @@
 size = Vector2(42, 85)
 
 [node name="CyberZumbi" type="CharacterBody2D"]
-scale = Vector2(0.6, 0.6)
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_om1e7")
-metadata/_edit_group_ = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(7, 0)

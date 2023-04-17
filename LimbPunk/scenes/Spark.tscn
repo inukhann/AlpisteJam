@@ -19,3 +19,9 @@ texture = ExtResource("2_mw2qc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="Fuel_timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]

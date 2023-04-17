@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dixdibb3jpbi5"]
 
 [ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/test_tile.png" id="1_reajk"]
-[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="2_yv3gi"]
+[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://Spark.tscn" id="2_yv3gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfpq0"]
 size = Vector2(356, 20)
