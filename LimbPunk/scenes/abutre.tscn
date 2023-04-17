@@ -13,6 +13,7 @@ size = Vector2(117, 115)
 position = Vector2(254, 109)
 scale = Vector2(0.7, 0.7)
 collision_layer = 4
+collision_mask = 10
 script = ExtResource("1_jyo83")
 metadata/_edit_group_ = true
 

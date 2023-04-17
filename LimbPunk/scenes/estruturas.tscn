@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cveik4dsau4rt"]
+
+[ext_resource type="Texture2D" uid="uid://cjkks2nio7o2y" path="res://sprites/cinza.png" id="1_u16hv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0i0u"]
+size = Vector2(458, 479)
+
+[node name="Estruturas" type="StaticBody2D"]
+position = Vector2(417, 347)
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.05176e-05, -3)
+scale = Vector2(0.306333, 0.321333)
+texture = ExtResource("1_u16hv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_p0i0u")
