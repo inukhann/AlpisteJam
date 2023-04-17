@@ -20,3 +20,5 @@ texture = ExtResource("2_dreem")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="Fuel_timer" type="Timer" parent="."]

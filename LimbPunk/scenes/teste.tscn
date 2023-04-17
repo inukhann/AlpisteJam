@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="1_sejva"]
 [ext_resource type="PackedScene" uid="uid://ccvuulxlp1nav" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
-[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="3_521kh"]
+[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://Spark.tscn" id="3_521kh"]
 [ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="4_mqudi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebx7q"]
@@ -53,7 +53,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_qmpfl")
 
 [node name="Cabeça" parent="." instance=ExtResource("3_6ltyb")]
-position = Vector2(44, 57)
+position = Vector2(62, -73)
 
 [node name="Spark" parent="." instance=ExtResource("3_521kh")]
 position = Vector2(-68, -139)
