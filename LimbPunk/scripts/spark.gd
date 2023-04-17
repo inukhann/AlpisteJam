@@ -17,8 +17,6 @@ const GRAVITY = 10
 @onready var velocity_mod_y = 1
 @onready var bullet_instance = preload("res://scenes/Bullet.tscn")
 
-
-
 func _ready():
 	Global.player = self
 	
@@ -29,7 +27,6 @@ func _physics_process(delta):
 	move_character_y()
 	move_and_slide()
 	
-
 func move_character_x():
 	if can_dash and !has_dashed and Input.is_action_just_pressed("DASH") and !on_cooldown:
 		var aux_mod = velocity_mod_x
