@@ -1,31 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmjfka4hvfxe6"]
+[gd_scene load_steps=6 format=3 uid="uid://cmjfka4hvfxe6"]
 
 [ext_resource type="Script" path="res://scripts/lixo.gd" id="1_llk0o"]
-[ext_resource type="Texture2D" uid="uid://lr03l2unserv" path="res://sprites/Fundo-verde-png-verde-floresta-300x300.png" id="2_i7v33"]
+[ext_resource type="Texture2D" uid="uid://cv32552ej355x" path="res://sprites/poça xexelenta toxica.png" id="2_a56d3"]
 [ext_resource type="Texture2D" uid="uid://kmbebwnk5rc5" path="res://sprites/light (1).jpg" id="3_0dy7m"]
+[ext_resource type="Texture2D" uid="uid://dv22xilhf6s5d" path="res://sprites/zoio nojento.png" id="4_62qh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mha2n"]
 size = Vector2(368, 34)
 
 [node name="lixo" type="Area2D"]
-position = Vector2(24, 12)
+position = Vector2(40, 34)
 script = ExtResource("1_llk0o")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_mha2n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, -0.5)
-scale = Vector2(1.23333, 0.103333)
-texture = ExtResource("2_i7v33")
+position = Vector2(-8.58307e-06, 7.5)
+scale = Vector2(14.125, 4.40625)
+texture = ExtResource("2_a56d3")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-1.5, 0)
 scale = Vector2(1.67556, 1)
 color = Color(0.494118, 0.627451, 0, 1)
-energy = 3.0
+energy = 1.6
 texture = ExtResource("3_0dy7m")
 texture_scale = 3.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-90, -17)
+scale = Vector2(2.21875, 1.89062)
+texture = ExtResource("4_62qh3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(79, -11)
+scale = Vector2(1.8125, 1.59375)
+texture = ExtResource("4_62qh3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
