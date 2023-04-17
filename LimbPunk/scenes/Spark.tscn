@@ -18,7 +18,7 @@ scale = Vector2(0.1875, 0.296875)
 texture = ExtResource("2_mw2qc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="Fuel_timer" type="Timer" parent="."]

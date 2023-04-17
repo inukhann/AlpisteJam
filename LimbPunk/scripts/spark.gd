@@ -4,8 +4,8 @@ enum Status {
 	NORMAL, ARMLESS, LEGLESS, LIMBLESS, BODYLESS
 }
 
-const base_velocity_x = 100
-const base_velocity_y = 200
+const base_velocity_x = 150
+const base_velocity_y = 300
 const GRAVITY = 10
 @onready var on_cooldown = false
 @onready var can_shoot = true
@@ -103,7 +103,7 @@ func detach_legs():
 		else:
 			velocity_mod_x = 0.5
 			char_state = Status.LEGLESS
-		velocity_mod_y = 2
+		velocity_mod_y = 1.5
 		#aqui mudaria algo da sprite, a ser feito ainda.
 
 func detach_head():
