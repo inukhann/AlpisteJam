@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://74m0unkh7a2j"]
+
+[ext_resource type="Texture2D" uid="uid://bpk0xpce7mfpr" path="res://sprites/vermelho.png" id="1_t6b2x"]
+[ext_resource type="Texture2D" uid="uid://kmbebwnk5rc5" path="res://sprites/light (1).jpg" id="2_hl75d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrue"]
+size = Vector2(50, 36)
+
+[node name="luzes_da_morte" type="Area2D"]
+collision_layer = 6
+collision_mask = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(41, 19)
+scale = Vector2(0.168333, 0.12)
+texture = ExtResource("1_t6b2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41, 19)
+shape = SubResource("RectangleShape2D_jmrue")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(40, 19)
+scale = Vector2(0.222222, 0.16)
+energy = 2.0
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("2_hl75d")
+texture_scale = 15.0

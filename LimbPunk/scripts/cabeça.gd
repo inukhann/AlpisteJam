@@ -12,7 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if STATUS == SHOOT:
-		$Timer.get_wait_time()
+		pass
 
 
 
@@ -20,6 +20,7 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(_body):
 	STATUS = SHOOT
+	$Timer.start(0.2)
 	
 	
 	
@@ -32,6 +33,7 @@ func shoot():
 
 func _on_area_2d_body_exited(_body):
 	STATUS = STOP
+	$Timer.stop()
 
 
 func _on_timer_timeout():
