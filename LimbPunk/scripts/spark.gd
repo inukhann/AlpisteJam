@@ -34,3 +34,6 @@ func move_character_y():
 		else:
 			velocity.y += GRAVITY
 		
+func gameover():
+	queue_free()
+	assert(get_tree().change_scene_to_file("res://scenes/gameover.tscn") == OK)
