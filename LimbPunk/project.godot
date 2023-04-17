@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LimbPunk"
-run/main_scene="res://scenes/map.tscn"
+run/main_scene="res://scenes/Map.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -51,11 +51,6 @@ DETACH={
 2d_render/layer_2="Enemies"
 2d_render/layer_3="Walls"
 2d_render/layer_4="Buttons"
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Fase"
-2d_physics/layer_3="Inimigos"
-2d_physics/layer_4="FaseInimigos"
-2d_physics/layer_5="Botão"
 
 [rendering]
 
