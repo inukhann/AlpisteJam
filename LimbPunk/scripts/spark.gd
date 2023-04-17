@@ -86,6 +86,7 @@ func change_status():
 	
 func shoot_bullet():
 	if can_shoot and Input.is_action_just_pressed("SHOOT"):
+		pass
 	
 func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:
