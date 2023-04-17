@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_0yebm"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="3_rcmvf"]
 
-[node name="Menu" type="Control"]
+[node name="Menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
