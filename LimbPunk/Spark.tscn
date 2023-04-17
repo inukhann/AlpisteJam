@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
 
 [node name="Spark" type="CharacterBody2D"]
-collision_mask = 7
+collision_mask = 3
 script = ExtResource("1_0wvcd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,7 +19,6 @@ scale = Vector2(0.1875, 0.296875)
 texture = ExtResource("2_dreem")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
 
 [node name="Fuel_timer" type="Timer" parent="."]
 wait_time = 15.0

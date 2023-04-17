@@ -1,12 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://t7s02ar8rpmm"]
+[gd_scene load_steps=7 format=3 uid="uid://t7s02ar8rpmm"]
 
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="1_sejva"]
 [ext_resource type="PackedScene" uid="uid://ccvuulxlp1nav" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://Spark.tscn" id="3_521kh"]
 [ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="4_mqudi"]
-[ext_resource type="PackedScene" uid="uid://cmjfka4hvfxe6" path="res://scenes/lixo.tscn" id="5_3asqh"]
-[ext_resource type="PackedScene" uid="uid://74m0unkh7a2j" path="res://scenes/luzes_da_morte.tscn" id="6_2yhx4"]
-[ext_resource type="PackedScene" uid="uid://cveik4dsau4rt" path="res://scenes/estruturas.tscn" id="7_8mir3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebx7q"]
 size = Vector2(1170, 1)
@@ -17,8 +14,8 @@ size = Vector2(258, 20)
 [node name="teste" type="Node2D"]
 position = Vector2(374, 434)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.345098, 0.345098, 0.345098, 1)
+[node name="CyberZumbi" parent="." instance=ExtResource("1_sejva")]
+position = Vector2(244, 61)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -56,22 +53,10 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_qmpfl")
 
 [node name="Cabeça" parent="." instance=ExtResource("3_6ltyb")]
-position = Vector2(263, 201)
+position = Vector2(62, -73)
 
 [node name="Spark" parent="." instance=ExtResource("3_521kh")]
 position = Vector2(-68, -139)
 
-[node name="lixo" parent="." instance=ExtResource("5_3asqh")]
-position = Vector2(204, -43)
-
 [node name="Abutre" parent="." instance=ExtResource("4_mqudi")]
-position = Vector2(1179, -270)
-
-[node name="luzes_da_morte" parent="." instance=ExtResource("6_2yhx4")]
-position = Vector2(229, -116)
-
-[node name="Estruturas" parent="." instance=ExtResource("7_8mir3")]
-position = Vector2(42, -79)
-
-[node name="CyberZumbi" parent="." instance=ExtResource("1_sejva")]
-position = Vector2(469, -98)
+position = Vector2(443, -377)
