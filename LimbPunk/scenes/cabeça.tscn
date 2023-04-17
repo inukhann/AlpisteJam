@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccvuulxlp1nav"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cgqht4b2rm2fv" path="res://left1.png" id="1_22iuv"]
+[ext_resource type="Texture2D" uid="uid://cgqht4b2rm2fv" path="res://sprites/left1.png" id="1_22iuv"]
 [ext_resource type="Script" path="res://scripts/cabeça.gd" id="1_f8gch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vobw0"]

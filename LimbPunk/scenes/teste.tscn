@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://t7s02ar8rpmm"]
 
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="1_sejva"]
-[ext_resource type="PackedScene" uid="uid://ccvuulxlp1nav" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
-[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://Spark.tscn" id="3_521kh"]
+[ext_resource type="PackedScene" path="res://scenes/cabeça.tscn" id="3_6ltyb"]
+[ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="3_msdtg"]
 [ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="4_mqudi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebx7q"]
@@ -19,7 +19,6 @@ position = Vector2(244, 61)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(164, -13)
@@ -55,8 +54,8 @@ shape = SubResource("RectangleShape2D_qmpfl")
 [node name="Cabeça" parent="." instance=ExtResource("3_6ltyb")]
 position = Vector2(62, -73)
 
-[node name="Spark" parent="." instance=ExtResource("3_521kh")]
-position = Vector2(-68, -139)
+[node name="Spark" parent="." instance=ExtResource("3_msdtg")]
+position = Vector2(-235, -36)
 
 [node name="Abutre" parent="." instance=ExtResource("4_mqudi")]
 position = Vector2(443, -377)
