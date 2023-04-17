@@ -6,7 +6,7 @@ enum Status {
 
 const MAX_HEAD_VEL = 300
 const BASE_VELOCITY_X = 180
-const BASE_VELOCITY_Y = 330
+const BASE_VELOCITY_Y = 335
 const GRAVITY = 10
 @onready var on_cooldown = false
 @onready var can_shoot = true
@@ -134,7 +134,7 @@ func detach_head():
 
 func gameover():
 	queue_free()
-	assert(get_tree().change_scene_to_file("res://scenes/gameover.tscn") == OK)
+	assert(get_tree().change_scene_to_file("res://scenes/fase_1.tscn") == OK)
 
 
 func _on_fuel_timer_timeout():
