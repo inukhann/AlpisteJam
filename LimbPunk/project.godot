@@ -24,6 +24,12 @@ Global="*res://scenes/global.tscn"
 window/size/viewport_width=1200
 window/size/viewport_height=900
 window/stretch/mode="viewport"
+window/layer_6="BalaCharacter"
+window/layer_5="Botões"
+window/layer_4="FaseInimigos"
+window/layer_3="Fase"
+window/layer_2="Inimigos"
+window/layer_1="Player"
 
 [input]
 
@@ -90,11 +96,10 @@ DETACH_LIMBS={
 2d_render/layer_4="FaseInimigos"
 2d_render/layer_5="Botões"
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Inimigos"
-2d_physics/layer_3="Fase"
-2d_physics/layer_4="FaseInimigos"
-2d_physics/layer_5="Botões"
-2d_physics/layer_6="BalaCharacter"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Walls"
+2d_physics/layer_4="Buttons"
+2d_physics/layer_5="PlayerBullet"
 
 [rendering]
 

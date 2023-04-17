@@ -3,36 +3,38 @@
 [ext_resource type="Script" path="res://scripts/Abutre.gd" id="1_jyo83"]
 [ext_resource type="Texture2D" uid="uid://btqe87lbx6ewv" path="res://icon.svg" id="2_e2nm3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j360m"]
-size = Vector2(119, 108)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecf4e"]
 size = Vector2(117, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j360m"]
+size = Vector2(119, 108)
 
 [node name="Abutre" type="CharacterBody2D"]
 position = Vector2(254, 109)
 scale = Vector2(0.7, 0.7)
-collision_layer = 4
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_jyo83")
-metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 0)
-shape = SubResource("RectangleShape2D_j360m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, -0.5)
 shape = SubResource("RectangleShape2D_ecf4e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_e2nm3")
 
+[node name="hurtbox" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+collision_layer = 0
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_j360m")
+
 [node name="Stun_cooldown" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="hurtbox" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Stun_cooldown" to="." method="_on_stun_cooldown_timeout"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dixdibb3jpbi5"]
+[gd_scene load_steps=6 format=3 uid="uid://dixdibb3jpbi5"]
 
 [ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/test_tile.png" id="1_reajk"]
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="2_td07o"]
+[ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="3_xond1"]
+[ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="4_bxiwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfpq0"]
 size = Vector2(356, 20)
@@ -18,11 +20,17 @@ scale = Vector2(4.5, 5.0625)
 texture = ExtResource("1_reajk")
 
 [node name="Spark" parent="." instance=ExtResource("2_td07o")]
-position = Vector2(238, 282)
+position = Vector2(421, 290)
+
+[node name="CyberZumbi" parent="." instance=ExtResource("3_xond1")]
+position = Vector2(118, 240)
+
+[node name="Abutre" parent="." instance=ExtResource("4_bxiwa")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(152, 316)
-collision_layer = 2
+collision_layer = 4
+collision_mask = 19
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
