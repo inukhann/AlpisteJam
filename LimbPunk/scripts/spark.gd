@@ -50,7 +50,6 @@ func move_character_x():
 		if char_state != Status.LIMBLESS and char_state != Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT"):
 				velocity.x = (velocity_mod_x * BASE_VELOCITY_X)
-				print("uá")
 			elif Input.is_action_pressed("MOVE_LEFT"):
 				velocity.x = (velocity_mod_x * -BASE_VELOCITY_X)
 			else:
@@ -97,6 +96,8 @@ func shoot_bullet():
 		get_parent().add_child(fired)
 		if fired.has_method("change_target"):
 			fired.change_target(get_global_mouse_position(), self.global_position)
+		can_shoot = false
+		$Bullet_cooldown.start()
 	
 func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:

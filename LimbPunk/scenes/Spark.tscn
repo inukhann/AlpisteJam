@@ -7,7 +7,7 @@
 size = Vector2(16, 15)
 
 [node name="Spark" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_35il2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -20,7 +20,6 @@ position = Vector2(1, -1)
 texture = ExtResource("2_wh6vt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -107)
 zoom = Vector2(2.4, 3.202)
 position_smoothing_enabled = true
 

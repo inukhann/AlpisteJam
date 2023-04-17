@@ -88,6 +88,7 @@ scale = Vector2(0.01, 2)
 [node name="lixo2" parent="." instance=ExtResource("1_3irow")]
 position = Vector2(1053, 886)
 scale = Vector2(1.4, 1.4)
+collision_layer = 8
 
 [node name="Estruturas8" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(4156, 670)
@@ -103,10 +104,6 @@ script = ExtResource("5_awwai")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final_1"]
 position = Vector2(4317.5, 359)
 shape = SubResource("RectangleShape2D_17iyf")
-
-[node name="CyberZumbi" parent="." instance=ExtResource("6_wyetp")]
-position = Vector2(1673, 848)
-scale = Vector2(0.8, 0.8)
 
 [node name="Estruturas10" parent="." instance=ExtResource("3_qd43g")]
 visible = false
@@ -127,6 +124,7 @@ scale = Vector2(0.3, 0.4)
 [node name="Estruturas13" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(1696, 1024)
 scale = Vector2(14, 0.5)
+collision_mask = 0
 
 [node name="Estruturas7" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(2734, 808)
@@ -221,7 +219,11 @@ scale = Vector2(1.52717, -1.41016)
 texture = ExtResource("8_pam5r")
 
 [node name="CyberZumbi2" parent="." instance=ExtResource("6_wyetp")]
-position = Vector2(2559, 664)
+position = Vector2(2602, 655)
+scale = Vector2(0.8, 0.8)
+
+[node name="CyberZumbi" parent="." instance=ExtResource("6_wyetp")]
+position = Vector2(1706, 839)
 scale = Vector2(0.8, 0.8)
 
 [node name="lixo3" parent="." instance=ExtResource("1_3irow")]
