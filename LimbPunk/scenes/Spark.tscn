@@ -25,4 +25,8 @@ position_smoothing_enabled = true
 wait_time = 15.0
 one_shot = true
 
+[node name="Dash_cooldown" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
+[connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
