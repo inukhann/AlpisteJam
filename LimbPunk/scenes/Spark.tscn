@@ -1,26 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
-[ext_resource type="Texture2D" uid="uid://btqe87lbx6ewv" path="res://icon.svg" id="2_mw2qc"]
+[ext_resource type="Texture2D" uid="uid://c6snx38bghac0" path="res://sprites/image.png" id="2_wh6vt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
+size = Vector2(16, 15)
 
 [node name="Spark" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_35il2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_668cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -1)
-scale = Vector2(0.1875, 0.296875)
-texture = ExtResource("2_mw2qc")
+texture = ExtResource("2_wh6vt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -60)
-zoom = Vector2(2, 2)
+offset = Vector2(0, -107)
+zoom = Vector2(2.4, 3.202)
 position_smoothing_enabled = true
 
 [node name="Fuel_timer" type="Timer" parent="."]
