@@ -4,8 +4,9 @@ enum Status {
 	NORMAL, ARMLESS, LEGLESS, LIMBLESS, BODYLESS
 }
 
-const base_velocity_x = 180
-const base_velocity_y = 330
+const MAX_HEAD_VEL = 300
+const BASE_VELOCITY_X = 180
+const BASE_VELOCITY_Y = 330
 const GRAVITY = 10
 @onready var on_cooldown = false
 @onready var can_shoot = true
@@ -38,41 +39,48 @@ func move_character_x():
 		elif Input.is_action_pressed("MOVE_RIGHT"):
 			aux_mod = 4
 			has_dashed = true
-		velocity.x = (aux_mod * base_velocity_x)
+		velocity.x = (aux_mod * BASE_VELOCITY_X)
 	elif has_dashed:
-		if velocity.x < base_velocity_x * -velocity_mod_x:
+		if velocity.x < BASE_VELOCITY_X * -velocity_mod_x:
 			velocity.x += 10
-		elif velocity.x > base_velocity_x * velocity_mod_x:
+		elif velocity.x > BASE_VELOCITY_X * velocity_mod_x:
 			velocity.x -= 10
 		else:
 			has_dashed = false
 			on_cooldown = true
 			$Dash_cooldown.start()
 	else:
-		if char_state != Status.LIMBLESS:
+		if char_state != Status.LIMBLESS and char_state != Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT"):
-				velocity.x = (velocity_mod_x * base_velocity_x)
+				velocity.x = (velocity_mod_x * BASE_VELOCITY_X)
+				print("uá")
 			elif Input.is_action_pressed("MOVE_LEFT"):
-				velocity.x = (velocity_mod_x * -base_velocity_x)
+				velocity.x = (velocity_mod_x * -BASE_VELOCITY_X)
 			else:
 				velocity.x = 0
+		elif char_state == Status.BODYLESS:
+			if Input.is_action_pressed("MOVE_RIGHT") and velocity.x < MAX_HEAD_VEL:
+				velocity.x += 10
+			elif Input.is_action_pressed("MOVE_LEFT") and velocity.x > -MAX_HEAD_VEL:
+				velocity.x -= 10
+			else:
+				velocity.x -= velocity.x / 10
 		else:
 			velocity.x = 0
 	
 func move_character_y():
 	if char_state != Status.BODYLESS:
 		if Input.is_action_pressed("JUMP") and is_on_floor():
-			velocity.y = (velocity_mod_y * -base_velocity_y)
+			velocity.y = (velocity_mod_y * -BASE_VELOCITY_Y)
 		else:
 			velocity.y += GRAVITY
 	else:
-		if Input.is_action_pressed("JUMP"):
-			velocity.y = (velocity_mod_y * -base_velocity_y)
-		elif Input.is_action_pressed("MOVE_DOWN"):
-			velocity.y = (velocity_mod_y * base_velocity_x)
+		if Input.is_action_pressed("JUMP") and velocity.y > -MAX_HEAD_VEL:
+			velocity.y -= 10
+		elif Input.is_action_pressed("MOVE_DOWN") and velocity.y < MAX_HEAD_VEL:
+			velocity.y += 10
 		else:
-			velocity.y = 0
-			
+			velocity.y -= velocity.y / 10
 			
 func change_status():
 	if Input.is_action_pressed("DETACH_HEAD"):
