@@ -130,3 +130,7 @@ func _on_fuel_timer_timeout():
 
 func _on_dash_cooldown_timeout():
 	on_cooldown = false
+
+
+func _on_bullet_cooldown_timeout():
+	can_shoot = true
