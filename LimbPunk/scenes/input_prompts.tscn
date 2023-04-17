@@ -1,0 +1,125 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp2gaip42184v"]
+
+[ext_resource type="Texture2D" uid="uid://c4lx6g7cato6x" path="res://sprites/mouse1.png" id="1_0rayc"]
+[ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="2_xgc7h"]
+[ext_resource type="Texture2D" uid="uid://bjdbyabmiag75" path="res://sprites/shift.png" id="3_wwi2t"]
+[ext_resource type="Texture2D" uid="uid://ci0emnnl6sxlu" path="res://sprites/ctrl.png" id="4_a4d5o"]
+[ext_resource type="Texture2D" uid="uid://c32jtks288idu" path="res://sprites/q.png" id="5_uxi78"]
+[ext_resource type="Texture2D" uid="uid://b4v5182qydxhd" path="res://sprites/e.png" id="6_re616"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 919.0
+offset_top = 604.0
+offset_right = 1019.0
+offset_bottom = 888.0
+
+[node name="MouseShoot" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("1_0rayc")
+stretch_mode = 4
+
+[node name="Shoot" type="Label" parent="GridContainer/MouseShoot"]
+texture_filter = 1
+offset_left = 79.0
+offset_top = 6.0
+offset_right = 179.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Shoot"
+vertical_alignment = 1
+
+[node name="ShiftDash" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("3_wwi2t")
+stretch_mode = 4
+
+[node name="Dash" type="Label" parent="GridContainer/ShiftDash"]
+texture_filter = 1
+offset_left = 109.0
+offset_top = 6.0
+offset_right = 209.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Dash"
+vertical_alignment = 1
+
+[node name="ShiftArms" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("3_wwi2t")
+stretch_mode = 4
+
+[node name="Detach" type="Label" parent="GridContainer/ShiftArms"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 109.0
+offset_top = 6.0
+offset_right = 209.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Detach Arms"
+vertical_alignment = 1
+
+[node name="CtrlLegs" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("4_a4d5o")
+stretch_mode = 4
+
+[node name="Detach2" type="Label" parent="GridContainer/CtrlLegs"]
+texture_filter = 1
+offset_left = 93.0
+offset_top = 6.0
+offset_right = 285.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Detach Legs"
+vertical_alignment = 1
+
+[node name="QLimbs" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("5_uxi78")
+stretch_mode = 4
+
+[node name="Detach3" type="Label" parent="GridContainer/QLimbs"]
+texture_filter = 1
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 267.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Detach Limbs"
+vertical_alignment = 1
+
+[node name="EHead" type="TextureRect" parent="GridContainer"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 2
+texture = ExtResource("6_re616")
+stretch_mode = 4
+
+[node name="Detach4" type="Label" parent="GridContainer/EHead"]
+texture_filter = 1
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 251.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_xgc7h")
+theme_override_font_sizes/font_size = 24
+text = "Detach Head"
+vertical_alignment = 1
