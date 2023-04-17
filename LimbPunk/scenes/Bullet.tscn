@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bims8peq36h20"]
+
+[ext_resource type="Script" path="res://scenes/char_bullet.gd" id="1_q021p"]
+[ext_resource type="Texture2D" uid="uid://cag7yirot2unu" path="res://sprites/bullet-sheet.png" id="2_rtv0h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_psmp6"]
+radius = 8.0
+height = 20.0
+
+[node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_q021p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_psmp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("2_rtv0h")
+
+[node name="Lifetime" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Lifetime" to="." method="_on_lifetime_timeout"]
