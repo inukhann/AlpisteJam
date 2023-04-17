@@ -14,6 +14,7 @@ const GRAVITY = 10
 @onready var char_state = Status.NORMAL
 @onready var velocity_mod_x = 1
 @onready var velocity_mod_y = 1
+@onready var bullet_instance = preload("res://scenes/Bullet.tscn")
 
 
 
@@ -22,6 +23,7 @@ func _ready():
 	
 func _physics_process(delta):
 	change_status()
+	shoot_bullet()
 	move_character_x()
 	move_character_y()
 	move_and_slide()
@@ -86,7 +88,11 @@ func change_status():
 	
 func shoot_bullet():
 	if can_shoot and Input.is_action_just_pressed("SHOOT"):
-		pass
+		var fired = bullet_instance.instantiate()
+		print("adieu")
+		get_parent().add_child(fired)
+		if fired.has_method("change_target"):
+			fired.change_target(get_global_mouse_position(), self.global_position)
 	
 func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:
