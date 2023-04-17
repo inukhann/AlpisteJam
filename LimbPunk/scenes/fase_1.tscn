@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://fgr4gt0435dm"]
+[gd_scene load_steps=9 format=3 uid="uid://fgr4gt0435dm"]
 
 [ext_resource type="PackedScene" uid="uid://cmjfka4hvfxe6" path="res://scenes/lixo.tscn" id="1_3irow"]
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="2_ouqy4"]
 [ext_resource type="PackedScene" uid="uid://cveik4dsau4rt" path="res://scenes/estruturas.tscn" id="3_qd43g"]
 [ext_resource type="PackedScene" uid="uid://74m0unkh7a2j" path="res://scenes/luzes_da_morte.tscn" id="4_d6oth"]
 [ext_resource type="Script" path="res://scripts/final_1.gd" id="5_awwai"]
+[ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="6_wyetp"]
+[ext_resource type="Texture2D" uid="uid://rgepegf6fdtr" path="res://sprites/mapa_1 fundo limbpunk.png" id="7_v5shd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17iyf"]
 size = Vector2(141, 144)
@@ -12,12 +14,8 @@ size = Vector2(141, 144)
 [node name="fase_1" type="Node2D"]
 
 [node name="lixo6" parent="." instance=ExtResource("1_3irow")]
-position = Vector2(3666, 836)
-scale = Vector2(1.4, 4)
-
-[node name="lixo5" parent="." instance=ExtResource("1_3irow")]
-position = Vector2(2593, 660)
-scale = Vector2(0.4, 0.4)
+position = Vector2(3629, 842)
+scale = Vector2(2, 4)
 
 [node name="lixo" parent="." instance=ExtResource("1_3irow")]
 position = Vector2(656, 894)
@@ -27,6 +25,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(28, 876)
 
 [node name="Estruturas" parent="." instance=ExtResource("3_qd43g")]
+visible = false
 position = Vector2(-2, 440)
 scale = Vector2(0.01, 2)
 
@@ -35,35 +34,27 @@ position = Vector2(1369, 902)
 scale = Vector2(9, 0.013)
 
 [node name="Estruturas3" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(254, 863)
-scale = Vector2(0.2, 0.15)
+position = Vector2(254, 860)
+scale = Vector2(0.2, 0.18)
 
 [node name="Estruturas4" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(520, 836)
-scale = Vector2(0.26, 0.26)
-
-[node name="Estruturas5" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(802, 831)
-scale = Vector2(0.3, 0.3)
+position = Vector2(519, 830)
+scale = Vector2(0.26, 0.3)
 
 [node name="lixo2" parent="." instance=ExtResource("1_3irow")]
 position = Vector2(1053, 886)
 
-[node name="Estruturas6" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(1306, 825)
-scale = Vector2(0.3, 0.3)
+[node name="Estruturas5" parent="." instance=ExtResource("3_qd43g")]
+position = Vector2(806, 821)
+scale = Vector2(0.3, 0.33)
 
 [node name="Estruturas7" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(2734, 782)
-scale = Vector2(3, 0.5)
+position = Vector2(2733, 804)
+scale = Vector2(2.9, 0.4)
 
 [node name="lixo3" parent="." instance=ExtResource("1_3irow")]
-position = Vector2(2184, 655)
-scale = Vector2(0.4, 0.4)
-
-[node name="lixo4" parent="." instance=ExtResource("1_3irow")]
-position = Vector2(3264, 655)
-scale = Vector2(0.4, 0.4)
+position = Vector2(2164, 706)
+scale = Vector2(0.3, 0.15)
 
 [node name="Estruturas8" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(4156, 670)
@@ -73,19 +64,68 @@ scale = Vector2(1, 1)
 position = Vector2(4160, 51)
 scale = Vector2(1, 1)
 
-[node name="luzes_da_morte" parent="." instance=ExtResource("4_d6oth")]
-position = Vector2(3917, 289)
-scale = Vector2(1, 1.6)
-
-[node name="luzes_da_morte2" parent="." instance=ExtResource("4_d6oth")]
-position = Vector2(4070, 359)
-scale = Vector2(1, 1.8)
-
 [node name="final_1" type="Area2D" parent="."]
 script = ExtResource("5_awwai")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final_1"]
 position = Vector2(4317.5, 359)
 shape = SubResource("RectangleShape2D_17iyf")
+
+[node name="CyberZumbi" parent="." instance=ExtResource("6_wyetp")]
+position = Vector2(1673, 848)
+scale = Vector2(0.8, 0.8)
+
+[node name="CyberZumbi2" parent="." instance=ExtResource("6_wyetp")]
+position = Vector2(2557, 655)
+scale = Vector2(0.8, 0.8)
+
+[node name="Estruturas10" parent="." instance=ExtResource("3_qd43g")]
+visible = false
+position = Vector2(2255, 593)
+scale = Vector2(0.02, 0.5)
+collision_layer = 8
+
+[node name="Estruturas11" parent="." instance=ExtResource("3_qd43g")]
+visible = false
+position = Vector2(3384, 604)
+scale = Vector2(0.05, 0.5)
+collision_layer = 8
+
+[node name="Estruturas12" parent="." instance=ExtResource("3_qd43g")]
+position = Vector2(3382, 569)
+scale = Vector2(0.05, 0.4)
+
+[node name="luzes_da_morte2" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(4052, 392)
+scale = Vector2(1, 2)
+
+[node name="luzes_da_morte" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(3955, 327)
+scale = Vector2(1, 2)
+
+[node name="luzes_da_morte3" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(4161, 326)
+scale = Vector2(1, 2)
+
+[node name="Estruturas6" parent="." instance=ExtResource("3_qd43g")]
+position = Vector2(1306, 807)
+scale = Vector2(0.3, 0.4)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -599.0
+offset_top = -177.0
+offset_right = 4412.0
+offset_bottom = 921.0
+color = Color(0, 0, 0, 0.427451)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0.5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(398, 505.844)
+scale = Vector2(2.55667, 3.53639)
+texture = ExtResource("7_v5shd")
 
 [connection signal="body_entered" from="final_1" to="final_1" method="_on_body_entered"]

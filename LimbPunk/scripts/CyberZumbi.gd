@@ -17,9 +17,9 @@ func _process(_delta):
 	velocity.y = gravity
 	
 	if move_direction == -1:
-		$Sprite2D.flip_h = true
-	else:
 		$Sprite2D.flip_h = false
+	else:
+		$Sprite2D.flip_h = true
 	
 	if $RayCast2D.is_colliding():
 		move_direction *= -1
