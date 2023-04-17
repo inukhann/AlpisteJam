@@ -14,6 +14,11 @@ const GRAVITY = 10
 @onready var velocity_mod_y = 1
 
 
+
+func _ready():
+	
+	Global.player = self
+	
 func _physics_process(delta):
 	change_status()
 	move_character_x()
