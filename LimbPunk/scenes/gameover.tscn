@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgqi4oh7bptwt"]
 
-[ext_resource type="Texture2D" uid="uid://btqe87lbx6ewv" path="res://icon.svg" id="1_qkfvt"]
+[ext_resource type="Texture2D" uid="uid://hp21lyixrjk" path="res://sprites/victory_limbpunk.png" id="1_l823u"]
 
 [node name="GAMEOVER" type="Control"]
 layout_mode = 3
@@ -11,5 +11,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(626, 346)
-texture = ExtResource("1_qkfvt")
+position = Vector2(599, 441.5)
+scale = Vector2(3.96667, 4.00444)
+texture = ExtResource("1_l823u")

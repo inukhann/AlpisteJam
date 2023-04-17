@@ -31,7 +31,7 @@ scale = Vector2(0.01, 2)
 
 [node name="Estruturas2" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(1369, 902)
-scale = Vector2(9, 0.013)
+scale = Vector2(9, 0.01)
 
 [node name="Estruturas3" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(254, 860)
@@ -47,14 +47,6 @@ position = Vector2(1053, 886)
 [node name="Estruturas5" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(806, 821)
 scale = Vector2(0.3, 0.33)
-
-[node name="Estruturas7" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(2733, 804)
-scale = Vector2(2.9, 0.4)
-
-[node name="lixo3" parent="." instance=ExtResource("1_3irow")]
-position = Vector2(2164, 706)
-scale = Vector2(0.3, 0.15)
 
 [node name="Estruturas8" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(4156, 670)
@@ -91,41 +83,49 @@ position = Vector2(3384, 604)
 scale = Vector2(0.05, 0.5)
 collision_layer = 8
 
-[node name="Estruturas12" parent="." instance=ExtResource("3_qd43g")]
-position = Vector2(3382, 569)
-scale = Vector2(0.05, 0.4)
-
-[node name="luzes_da_morte2" parent="." instance=ExtResource("4_d6oth")]
-position = Vector2(4052, 392)
-scale = Vector2(1, 2)
-
-[node name="luzes_da_morte" parent="." instance=ExtResource("4_d6oth")]
-position = Vector2(3955, 327)
-scale = Vector2(1, 2)
-
-[node name="luzes_da_morte3" parent="." instance=ExtResource("4_d6oth")]
-position = Vector2(4161, 326)
-scale = Vector2(1, 2)
-
 [node name="Estruturas6" parent="." instance=ExtResource("3_qd43g")]
 position = Vector2(1306, 807)
 scale = Vector2(0.3, 0.4)
 
+[node name="Estruturas13" parent="." instance=ExtResource("3_qd43g")]
+position = Vector2(1696, 1024)
+scale = Vector2(14, 0.5)
+
+[node name="Estruturas7" parent="." instance=ExtResource("3_qd43g")]
+position = Vector2(2734, 808)
+scale = Vector2(2.9, 0.4)
+
+[node name="lixo3" parent="." instance=ExtResource("1_3irow")]
+position = Vector2(2145, 709)
+scale = Vector2(0.3, 0.15)
+
+[node name="luzes_da_morte" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(3963, 319)
+scale = Vector2(0.8, 1.6)
+
+[node name="luzes_da_morte3" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(4164, 319)
+scale = Vector2(1, 1.6)
+
+[node name="luzes_da_morte2" parent="." instance=ExtResource("4_d6oth")]
+position = Vector2(4054, 397)
+scale = Vector2(1, 1.6)
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -599.0
-offset_top = -177.0
-offset_right = 4412.0
-offset_bottom = 921.0
+offset_left = -1623.0
+offset_top = -325.0
+offset_right = 4994.0
+offset_bottom = 1717.0
 color = Color(0, 0, 0, 0.427451)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(0.5, 0)
+motion_mirroring = Vector2(0.01, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(398, 505.844)
-scale = Vector2(2.55667, 3.53639)
+position = Vector2(408.141, 447.37)
+scale = Vector2(2.70573, 3.97662)
 texture = ExtResource("7_v5shd")
 
 [connection signal="body_entered" from="final_1" to="final_1" method="_on_body_entered"]
