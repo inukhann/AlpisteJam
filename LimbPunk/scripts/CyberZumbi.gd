@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 
-var speed = 200
+var speed = 300
 var move_direction = 1
 var gravity = 3000
 

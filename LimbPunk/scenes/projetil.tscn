@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtd6j2ntssr25"]
+
+[ext_resource type="Texture2D" uid="uid://cag7yirot2unu" path="res://sprites/bullet-sheet.png" id="1_kg3h6"]
+[ext_resource type="Script" path="res://scripts/projetil.gd" id="1_yhorf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_213r1"]
+
+[node name="Projetil" type="Area2D"]
+collision_layer = 11
+collision_mask = 3
+script = ExtResource("1_yhorf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_213r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kg3h6")
+
+[node name="ClearNode" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="ClearNode" to="." method="_on_clear_node_screen_exited"]
