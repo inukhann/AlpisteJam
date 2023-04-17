@@ -86,6 +86,7 @@ func change_status():
 	
 func shoot_bullet():
 	if can_shoot and Input.is_action_just_pressed("SHOOT"):
+		pass
 	
 func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:
@@ -129,3 +130,7 @@ func _on_fuel_timer_timeout():
 
 func _on_dash_cooldown_timeout():
 	on_cooldown = false
+
+
+func _on_bullet_cooldown_timeout():
+	can_shoot = true

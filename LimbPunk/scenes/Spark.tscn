@@ -19,7 +19,7 @@ scale = Vector2(0.1875, 0.296875)
 texture = ExtResource("2_mw2qc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -100)
+offset = Vector2(0, -60)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
@@ -30,5 +30,10 @@ one_shot = true
 [node name="Dash_cooldown" type="Timer" parent="."]
 one_shot = true
 
+[node name="Bullet_cooldown" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="Bullet_cooldown" to="." method="_on_bullet_cooldown_timeout"]
