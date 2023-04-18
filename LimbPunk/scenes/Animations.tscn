@@ -14,6 +14,7 @@ size = Vector2(356, 20)
 [sub_resource type="Animation" id="Animation_tcubv"]
 resource_name = "Idle"
 length = 5.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -519,7 +520,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(41, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 41, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0, 41, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(41, -0.25, 0, 0.25, 0, 39, -0.25, 0, 0.25, 0, 41, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0, 41, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8)
 }
 tracks/1/type = "bezier"
@@ -530,7 +531,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(129, -0.25, 0, 0.25, 0, 146, -0.25, 0, 0.25, 0, 129, -0.25, 0, 0.25, 0, 136, -0.25, 0, 0.25, 0, 129, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(129, -0.25, 0, 0.25, 0, 146, -0.25, 0, 0.25, 0, 129, -0.25, 0, 0.25, 0, 144, -0.25, 0, 0.25, 0, 129, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8)
 }
 tracks/2/type = "bezier"
@@ -541,7 +542,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.0619476, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.130366, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.0619476, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.0485977, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8)
 }
 tracks/3/type = "bezier"
