@@ -19,6 +19,7 @@ const GRAVITY = 10
 
 func _ready():
 	Global.player = self
+	$Normal_Sprite/AnimationPlayer.queue("Idle")
 	
 func _physics_process(delta):
 	change_status()
@@ -50,10 +51,13 @@ func move_character_x():
 		if char_state != Status.LIMBLESS and char_state != Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT"):
 				velocity.x = (velocity_mod_x * BASE_VELOCITY_X)
+				queue_anim("Run")
 			elif Input.is_action_pressed("MOVE_LEFT"):
 				velocity.x = (velocity_mod_x * -BASE_VELOCITY_X)
+				queue_anim("Run")
 			else:
 				velocity.x = 0
+				queue_anim("Idle")
 		elif char_state == Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT") and velocity.x < MAX_HEAD_VEL:
 				velocity.x += 10
@@ -63,6 +67,7 @@ func move_character_x():
 				velocity.x -= velocity.x / 10
 		else:
 			velocity.x = 0
+			
 	
 func move_character_y():
 	if char_state != Status.BODYLESS:
@@ -145,3 +150,7 @@ func _on_dash_cooldown_timeout():
 
 func _on_bullet_cooldown_timeout():
 	can_shoot = true
+	
+func queue_anim(queued):
+	if !$Normal_Sprite/AnimationPlayer.get_current_animation() == queued:
+		$Normal_Sprite/AnimationPlayer.play(queued)
