@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://k2fs3jb0rimb"]
 
 [ext_resource type="Script" path="res://scripts/Abutre.gd" id="1_jyo83"]
-[ext_resource type="Texture2D" uid="uid://btqe87lbx6ewv" path="res://icon.svg" id="2_e2nm3"]
+[ext_resource type="Texture2D" uid="uid://bi8qg731o8oeg" path="res://icon.svg" id="2_e2nm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecf4e"]
 size = Vector2(117, 115)
@@ -24,7 +24,6 @@ shape = SubResource("RectangleShape2D_ecf4e")
 texture = ExtResource("2_e2nm3")
 
 [node name="hurtbox" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 collision_layer = 0
 collision_mask = 17
 
