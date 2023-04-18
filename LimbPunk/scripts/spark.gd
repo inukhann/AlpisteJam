@@ -5,7 +5,7 @@ enum Status {
 }
 
 const MAX_HEAD_VEL = 300
-const BASE_VELOCITY_X = 180
+const BASE_VELOCITY_X = 200
 const BASE_VELOCITY_Y = 300
 const GRAVITY = 10
 @onready var on_cooldown = false
@@ -119,6 +119,10 @@ func detach_legs():
 			velocity_mod_x = 0.5
 			char_state = Status.LEGLESS
 		velocity_mod_y = 1.5
+		
+		$hitbox_normal.set_deferred("disabled", true)
+		$hitbox_head.set_deferred("disabled", true)
+		
 		#aqui mudaria algo da sprite, a ser feito ainda.
 
 func detach_head():
@@ -128,6 +132,8 @@ func detach_head():
 	velocity_mod_y = 1.2
 	char_state = Status.BODYLESS
 	$Fuel_timer.start()
+	$hitbox_normal.set_deferred("disabled", true)
+	$hitbox_leg.set_deferred("disabled", true)
 
 
 func gameover():

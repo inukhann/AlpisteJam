@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://deaj2dwrifxw5"]
+[gd_scene load_steps=6 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
 [ext_resource type="Texture2D" uid="uid://c6snx38bghac0" path="res://sprites/image.png" id="2_wh6vt"]
@@ -6,12 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
 size = Vector2(16, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1fe2"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cu6l3"]
+size = Vector2(10, 8.75)
+
 [node name="Spark" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_mask = 6
 script = ExtResource("1_35il2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="hitbox_normal" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1)
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_668cv")
@@ -34,6 +40,14 @@ one_shot = true
 [node name="Bullet_cooldown" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
+
+[node name="hitbox_leg" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6.5)
+shape = SubResource("RectangleShape2D_f1fe2")
+
+[node name="hitbox_head" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -11.625)
+shape = SubResource("RectangleShape2D_cu6l3")
 
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
