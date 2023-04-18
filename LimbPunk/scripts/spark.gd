@@ -20,6 +20,9 @@ const GRAVITY = 10
 func _ready():
 	Global.player = self
 	$Normal_Sprite/AnimationPlayer.queue("Idle")
+	$Leg_Torso_Collision.set_disabled(true)
+	$Torso_Collision.set_disabled(true)
+	$Head_Collision.set_disabled(true)
 	
 func _physics_process(delta):
 	change_status()
@@ -117,18 +120,26 @@ func detach_arms():
 			char_state = Status.LIMBLESS
 		else:
 			char_state = Status.ARMLESS
-		#aqui mudaria algo da sprite, a ser feito ainda.
+			$Leg_Torso_Arm_Collision.set_disabled(true)
+			$Leg_Torso_Collision.set_disabled(false)
+		$Normal_Sprite/Torso/ArmLeft.hide()
+		$Normal_Sprite/Torso/ArmRight.hide()
 
 func detach_legs():
 	if char_state == Status.NORMAL or char_state == Status.ARMLESS:
 		if char_state == Status.ARMLESS:
 			velocity_mod_x = 0
 			char_state = Status.LIMBLESS
+			$Leg_Torso_Collision.set_disabled(true)
+			$Torso_Collision.set_disabled(false)
 		else:
 			velocity_mod_x = 0.5
 			char_state = Status.LEGLESS
+			$Leg_Torso_Arm_Collision.set_disabled(true)
+			$Torso_Collision.set_disabled(false)
 		velocity_mod_y = 1.5
-		#aqui mudaria algo da sprite, a ser feito ainda.
+		$Normal_Sprite/Torso/LegLeft.hide()
+		$Normal_Sprite/Torso/LegRight.hide()
 
 func detach_head():
 	can_shoot = false
@@ -136,6 +147,20 @@ func detach_head():
 	velocity_mod_x = 1.2
 	velocity_mod_y = 1.2
 	char_state = Status.BODYLESS
+	
+	$Leg_Torso_Arm_Collision.set_disabled(true)
+	$Leg_Torso_Collision.set_disabled(true)
+	$Torso_Collision.set_disabled(true)
+	$Head_Collision.set_disabled(false)
+	
+	$Normal_Sprite/Torso/ArmLeft.hide()
+	$Normal_Sprite/Torso/ArmRight.hide()
+	$Normal_Sprite/Torso/LegLeft.hide()
+	$Normal_Sprite/Torso/LegRight.hide()
+	$Normal_Sprite/Torso/Body.hide()
+	
+	$Normal_Sprite/AnimationPlayer.stop()
+	
 	$Fuel_timer.start()
 
 
