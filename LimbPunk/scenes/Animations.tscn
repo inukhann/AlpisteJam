@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bivtn770wsxur"]
+
+[ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/test_tile.png" id="1_pppil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71ib0"]
+size = Vector2(356, 20)
+
+[sub_resource type="ImageTexture" id="ImageTexture_77xno"]
+resource_name = "Head"
+
+[node name="Animations" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(4.5, 5.0625)
+texture = ExtResource("1_pppil")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(255, 373)
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(127, 0)
+shape = SubResource("RectangleShape2D_71ib0")
+
+[node name="CharacterRig" type="Node" parent="."]
+
+[node name="Torso" type="Sprite2D" parent="CharacterRig"]
+
+[node name="Head" type="Sprite2D" parent="CharacterRig/Torso"]
+texture = SubResource("ImageTexture_77xno")
+
+[node name="LegRight" type="Sprite2D" parent="CharacterRig/Torso"]
+
+[node name="LegLeft" type="Sprite2D" parent="CharacterRig/Torso"]
