@@ -6,7 +6,7 @@ enum Status {
 
 const MAX_HEAD_VEL = 300
 const BASE_VELOCITY_X = 180
-const BASE_VELOCITY_Y = 335
+const BASE_VELOCITY_Y = 300
 const GRAVITY = 10
 @onready var on_cooldown = false
 @onready var can_shoot = true
