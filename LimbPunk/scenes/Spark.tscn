@@ -7,6 +7,7 @@
 size = Vector2(16, 15)
 
 [node name="Spark" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_mask = 6
 script = ExtResource("1_35il2")
 
@@ -20,7 +21,7 @@ position = Vector2(1, -1)
 texture = ExtResource("2_wh6vt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.4, 3.202)
+zoom = Vector2(2, 2.668)
 position_smoothing_enabled = true
 
 [node name="Fuel_timer" type="Timer" parent="."]
