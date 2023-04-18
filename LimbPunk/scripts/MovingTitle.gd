@@ -8,7 +8,7 @@ func _ready():
 	t = 0.001
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	t = t + 0.02
 	self.position.y = self.position.y + (0.08 * sin(t))

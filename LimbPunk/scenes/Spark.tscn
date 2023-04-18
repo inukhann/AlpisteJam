@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://deaj2dwrifxw5"]
+[gd_scene load_steps=13 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
 [ext_resource type="PackedScene" uid="uid://bobd3018ernbs" path="res://scenes/normal_sprite.tscn" id="2_fngcp"]
 [ext_resource type="PackedScene" uid="uid://dp2gaip42184v" path="res://scenes/input_prompts.tscn" id="3_k6auj"]
+[ext_resource type="AudioStream" uid="uid://84do58ulg1dp" path="res://assets/SFX/meat_chop2.wav" id="4_6r88o"]
+[ext_resource type="AudioStream" uid="uid://duq1yv4r4bdex" path="res://assets/SFX/meat_chop1.wav" id="4_klc5f"]
+[ext_resource type="AudioStream" uid="uid://cxrpumljy5qy6" path="res://assets/SFX/meat_fall2.wav" id="6_sp5jm"]
+[ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="7_j6xpe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
 size = Vector2(16, 15)
@@ -15,6 +19,9 @@ size = Vector2(12, 20.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4bov1"]
 size = Vector2(9.5, 8)
+
+[sub_resource type="Theme" id="Theme_yfxjx"]
+default_font = ExtResource("7_j6xpe")
 
 [node name="Spark" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -32,10 +39,11 @@ position_smoothing_enabled = true
 [node name="Normal_Sprite" parent="." instance=ExtResource("2_fngcp")]
 
 [node name="Fuel_timer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 8.0
 one_shot = true
 
 [node name="Dash_cooldown" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 
 [node name="Bullet_cooldown" type="Timer" parent="."]
@@ -56,8 +64,31 @@ shape = SubResource("RectangleShape2D_4bov1")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_k6auj")]
 
+[node name="PernasFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6r88o")
+
+[node name="BraçoFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_klc5f")
+
+[node name="CabeçaFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_sp5jm")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -29.5
+offset_right = 41.0
+offset_bottom = -9.5
+theme = SubResource("Theme_yfxjx")
+max_value = 8.0
+step = 1.0
+value = 8.0
+fill_mode = 1
+
+[node name="progressTime" type="Timer" parent="ProgressBar"]
+
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="Bullet_cooldown" to="." method="_on_bullet_cooldown_timeout"]
+[connection signal="timeout" from="ProgressBar/progressTime" to="." method="_on_progress_time_timeout"]
 
 [editable path="Normal_Sprite"]

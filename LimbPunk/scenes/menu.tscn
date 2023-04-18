@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c54axyawcajux"]
+[gd_scene load_steps=7 format=3 uid="uid://c54axyawcajux"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_0yebm"]
+[ext_resource type="AudioStream" uid="uid://3f6fhk53t4pc" path="res://assets/SFX/screech1.wav" id="2_r8lep"]
 [ext_resource type="Texture2D" uid="uid://bc11w4a1q502u" path="res://assets/title.png" id="2_sqb06"]
 [ext_resource type="Script" path="res://scripts/MovingTitle.gd" id="3_7bb1y"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="3_rcmvf"]
@@ -14,6 +15,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0yebm")
+
+[node name="MenuFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(480, 432)
+stream = ExtResource("2_r8lep")
+autoplay = true
 
 [node name="Title" type="Sprite2D" parent="."]
 texture_filter = 1

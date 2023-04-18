@@ -35,3 +35,7 @@ func _on_area_2d_body_entered(body):
 
 func _on_stun_timer_timeout():
 	can_attack = true
+
+
+func _on_time_fx_timeout():
+	$passos.play()

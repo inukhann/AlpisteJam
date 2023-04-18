@@ -1,18 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3eq82joidhug"]
+[gd_scene load_steps=6 format=3 uid="uid://d3eq82joidhug"]
 
 [ext_resource type="Script" path="res://scripts/CyberZumbi.gd" id="1_om1e7"]
 [ext_resource type="Texture2D" uid="uid://bly8riepmqpf5" path="res://sprites/zombie_limbpunk.png" id="2_xf4j8"]
+[ext_resource type="AudioStream" uid="uid://bwxrttwftv1j0" path="res://assets/SFX/steps.wav" id="3_vpb6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b32q"]
-size = Vector2(62, 85.75)
+size = Vector2(39, 85.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmuxo"]
-size = Vector2(64, 88)
+size = Vector2(45, 88)
 
 [node name="CyberZumbi" type="CharacterBody2D"]
 position = Vector2(605, 244)
 collision_layer = 2
-collision_mask = 5
+collision_mask = 4
 script = ExtResource("1_om1e7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -26,7 +27,7 @@ target_position = Vector2(32, 1)
 collision_mask = 132
 
 [node name="Hitbox_raycast" type="CollisionShape2D" parent="."]
-position = Vector2(6, 19)
+position = Vector2(8.5, 19)
 shape = SubResource("RectangleShape2D_0b32q")
 
 [node name="Hurtbox" type="Area2D" parent="."]
@@ -34,12 +35,21 @@ collision_layer = 0
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(6, 19)
+visible = false
+position = Vector2(8.5, 19)
 shape = SubResource("RectangleShape2D_mmuxo")
 
 [node name="Stun_timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
+[node name="passos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vpb6c")
+
+[node name="TimeFX" type="Timer" parent="."]
+wait_time = 6.34
+autostart = true
+
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Stun_timer" to="." method="_on_stun_timer_timeout"]
+[connection signal="timeout" from="TimeFX" to="." method="_on_time_fx_timeout"]

@@ -60,3 +60,4 @@ theme_override_font_sizes/font_size = 48
 text = "     Exit   "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

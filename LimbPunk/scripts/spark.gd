@@ -18,6 +18,7 @@ const GRAVITY = 10
 @onready var bullet_instance = preload("res://scenes/Bullet.tscn")
 
 func _ready():
+	$ProgressBar.hide()
 	Global.player = self
 	$Normal_Sprite/AnimationPlayer.queue("Idle")
 	$Leg_Torso_Collision.set_disabled(true)
@@ -115,6 +116,7 @@ func detach_arms():
 	if char_state == Status.NORMAL or char_state == Status.LEGLESS:
 		can_dash = true
 		can_shoot = false
+		$"BraçoFX".play()
 		if char_state == Status.LEGLESS:
 			velocity_mod_x = 0
 			char_state = Status.LIMBLESS
@@ -127,6 +129,7 @@ func detach_arms():
 
 func detach_legs():
 	if char_state == Status.NORMAL or char_state == Status.ARMLESS:
+		$PernasFX.play()
 		if char_state == Status.ARMLESS:
 			velocity_mod_x = 0
 			char_state = Status.LIMBLESS
@@ -142,6 +145,9 @@ func detach_legs():
 		$Normal_Sprite/Torso/LegRight.hide()
 
 func detach_head():
+	$ProgressBar.show()
+	$ProgressBar/progressTime.start()
+	$"CabeçaFX".play()
 	can_shoot = false
 	can_dash = false
 	velocity_mod_x = 1.2
@@ -183,3 +189,7 @@ func _on_bullet_cooldown_timeout():
 func queue_anim(queued):
 	if !$Normal_Sprite/AnimationPlayer.get_current_animation() == queued:
 		$Normal_Sprite/AnimationPlayer.play(queued)
+
+
+func _on_progress_time_timeout():
+	$ProgressBar.value -= 1

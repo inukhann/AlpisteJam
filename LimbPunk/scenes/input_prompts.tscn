@@ -100,16 +100,16 @@ layout_mode = 2
 texture = ExtResource("5_uxi78")
 stretch_mode = 4
 
-[node name="Detach3" type="Label" parent="GridContainer/QLimbs"]
+[node name="Detach4" type="Label" parent="GridContainer/QLimbs"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 53.0
-offset_top = 6.0
-offset_right = 267.0
-offset_bottom = 41.0
+offset_left = 61.6666
+offset_top = 7.99988
+offset_right = 259.667
+offset_bottom = 42.9999
 theme_override_fonts/font = ExtResource("2_xgc7h")
 theme_override_font_sizes/font_size = 24
-text = "Detach Limbs"
+text = "Detach Head"
 vertical_alignment = 1
 
 [node name="EHead" type="TextureRect" parent="GridContainer"]
@@ -119,14 +119,14 @@ layout_mode = 2
 texture = ExtResource("6_re616")
 stretch_mode = 4
 
-[node name="Detach4" type="Label" parent="GridContainer/EHead"]
+[node name="Detach3" type="Label" parent="GridContainer/EHead"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 53.0
-offset_top = 6.0
-offset_right = 251.0
-offset_bottom = 41.0
+layout_mode = 2
+offset_left = 63.3334
+offset_top = 8.33325
+offset_right = 227.333
+offset_bottom = 35.3333
 theme_override_fonts/font = ExtResource("2_xgc7h")
 theme_override_font_sizes/font_size = 24
-text = "Detach Head"
+text = "Detach Limbs"
 vertical_alignment = 1
