@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bejoa5ob870pn"]
+[gd_scene load_steps=11 format=3 uid="uid://bobd3018ernbs"]
 
 [ext_resource type="Texture2D" uid="uid://c5km6vghdwkhk" path="res://sprites/Spark/LegLeft.png" id="1_ar8ky"]
 [ext_resource type="Texture2D" uid="uid://x5l7aepp6n6q" path="res://sprites/Spark/LegRight.png" id="2_wot5m"]
@@ -45,7 +45,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 2.5, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(592, 246), Vector2(592, 246), Vector2(592, 246)]
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -508,6 +508,7 @@ tracks/27/keys = {
 [sub_resource type="Animation" id="Animation_br5ay"]
 resource_name = "Run"
 length = 0.8
+loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -549,7 +550,7 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(592, -0.25, 0, 0.25, 0, 592, -0.25, 0, 0.25, 0, 592, -0.25, 0, 0.25, 0, 592, -0.25, 0, 0.25, 0, 592, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8)
 }
 tracks/4/type = "bezier"
@@ -560,7 +561,7 @@ tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(246, -0.25, 0, 0.25, 0, 239, -0.25, 0, 0.25, 0, 246, -0.25, 0, 0.25, 0, 239, -0.25, 0, 0.25, 0, 246, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -7, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -7, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8)
 }
 tracks/5/type = "bezier"
@@ -748,6 +749,7 @@ _data = {
 }
 
 [node name="Normal_Sprite" type="Node2D"]
+position = Vector2(-2, -7.5)
 
 [node name="Torso" type="Sprite2D" parent="."]
 position = Vector2(592, 246)
