@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp2gaip42184v"]
+[gd_scene load_steps=7 format=3 uid="uid://3y0hfs4qbtni"]
 
 [ext_resource type="Texture2D" uid="uid://c4lx6g7cato6x" path="res://sprites/mouse1.png" id="1_0rayc"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="2_xgc7h"]
@@ -24,6 +24,7 @@ stretch_mode = 4
 
 [node name="Shoot" type="Label" parent="GridContainer/MouseShoot"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 79.0
 offset_top = 6.0
 offset_right = 179.0
@@ -42,6 +43,7 @@ stretch_mode = 4
 
 [node name="Dash" type="Label" parent="GridContainer/ShiftDash"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 109.0
 offset_top = 6.0
 offset_right = 209.0
@@ -79,6 +81,7 @@ stretch_mode = 4
 
 [node name="Detach2" type="Label" parent="GridContainer/CtrlLegs"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 93.0
 offset_top = 6.0
 offset_right = 285.0
@@ -97,6 +100,7 @@ stretch_mode = 4
 
 [node name="Detach3" type="Label" parent="GridContainer/QLimbs"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 53.0
 offset_top = 6.0
 offset_right = 267.0
@@ -115,6 +119,7 @@ stretch_mode = 4
 
 [node name="Detach4" type="Label" parent="GridContainer/EHead"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 53.0
 offset_top = 6.0
 offset_right = 251.0

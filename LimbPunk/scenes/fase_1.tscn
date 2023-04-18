@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://fgr4gt0435dm"]
+[gd_scene load_steps=14 format=3 uid="uid://fgr4gt0435dm"]
 
 [ext_resource type="PackedScene" uid="uid://cmjfka4hvfxe6" path="res://scenes/lixo.tscn" id="1_3irow"]
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="2_ouqy4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://rgepegf6fdtr" path="res://sprites/mapa_1 fundo limbpunk.png" id="7_v5shd"]
 [ext_resource type="Texture2D" uid="uid://dv22xilhf6s5d" path="res://sprites/zoio nojento.png" id="8_pam5r"]
 [ext_resource type="Texture2D" uid="uid://df7eqb7fa7se3" path="res://sprites/till1.png" id="9_lolgb"]
+[ext_resource type="PackedScene" uid="uid://k2fs3jb0rimb" path="res://scenes/abutre.tscn" id="9_rlrmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17iyf"]
 size = Vector2(141, 144)
@@ -225,6 +226,10 @@ collision_mask = 133
 [node name="CyberZumbi" parent="." instance=ExtResource("6_wyetp")]
 position = Vector2(1711, 846)
 scale = Vector2(0.8, 0.8)
+
+[node name="Abutre" parent="." instance=ExtResource("9_rlrmb")]
+position = Vector2(87, 408)
+scale = Vector2(0.229, 0.342222)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1314.0

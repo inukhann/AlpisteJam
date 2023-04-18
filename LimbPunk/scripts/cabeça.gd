@@ -20,7 +20,7 @@ func _process(_delta):
 
 func _on_area_2d_body_entered(_body):
 	STATUS = SHOOT
-	$Timer.start(0.2)
+	$Timer.start(1)
 	
 	
 	
@@ -38,3 +38,7 @@ func _on_area_2d_body_exited(_body):
 
 func _on_timer_timeout():
 	shoot()
+
+
+func _on_morre_desgraa_body_entered(body):
+	queue_free()
