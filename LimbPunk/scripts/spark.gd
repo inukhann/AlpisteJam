@@ -51,13 +51,16 @@ func move_character_x():
 		if char_state != Status.LIMBLESS and char_state != Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT"):
 				velocity.x = (velocity_mod_x * BASE_VELOCITY_X)
-				queue_anim("Run")
+				if !$Normal_Sprite/AnimationPlayer.get_current_animation() == "Jump" and is_on_floor():
+					queue_anim("Run")
 			elif Input.is_action_pressed("MOVE_LEFT"):
 				velocity.x = (velocity_mod_x * -BASE_VELOCITY_X)
-				queue_anim("Run")
+				if !$Normal_Sprite/AnimationPlayer.get_current_animation() == "Jump" and is_on_floor():
+					queue_anim("Run")
 			else:
 				velocity.x = 0
-				queue_anim("Idle")
+				if !$Normal_Sprite/AnimationPlayer.get_current_animation() == "Jump" and is_on_floor():
+					queue_anim("Idle")
 		elif char_state == Status.BODYLESS:
 			if Input.is_action_pressed("MOVE_RIGHT") and velocity.x < MAX_HEAD_VEL:
 				velocity.x += 10
@@ -72,6 +75,7 @@ func move_character_x():
 func move_character_y():
 	if char_state != Status.BODYLESS:
 		if Input.is_action_pressed("JUMP") and is_on_floor():
+			queue_anim("Jump")
 			velocity.y = (velocity_mod_y * -BASE_VELOCITY_Y)
 		else:
 			velocity.y += GRAVITY
