@@ -1,25 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://74m0unkh7a2j"]
 
 [ext_resource type="Script" path="res://scripts/luzes_da_morte.gd" id="1_gpys1"]
-[ext_resource type="Texture2D" uid="uid://bpk0xpce7mfpr" path="res://sprites/vermelho.png" id="1_t6b2x"]
 [ext_resource type="Texture2D" uid="uid://kmbebwnk5rc5" path="res://sprites/light (1).jpg" id="2_hl75d"]
+[ext_resource type="Texture2D" uid="uid://bs6prdu3ijse2" path="res://sprites/fios limbpunk (1).png" id="3_ergjs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrue"]
-size = Vector2(50, 36)
+size = Vector2(33, 36)
 
 [node name="luzes_da_morte" type="Area2D"]
 position = Vector2(51, 5)
 script = ExtResource("1_gpys1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_jmrue")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.999992, 0)
-scale = Vector2(0.168333, 0.12)
-texture = ExtResource("1_t6b2x")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(3, 4)
@@ -29,5 +19,14 @@ skew = 0.507891
 color = Color(0.603922, 0.109804, 0.270588, 1)
 energy = 3.0
 texture = ExtResource("2_hl75d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 2)
+shape = SubResource("RectangleShape2D_jmrue")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9, -3)
+scale = Vector2(0.771667, 1.03125)
+texture = ExtResource("3_ergjs")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
