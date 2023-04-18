@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://ivnlp8c8gsxh"]
+
+[ext_resource type="Script" path="res://scripts/Vitoria.gd" id="1_a4d62"]
+[ext_resource type="AudioStream" uid="uid://xyk4n00124cc" path="res://assets/OST/Ending Theme.wav" id="2_kt00q"]
+[ext_resource type="Texture2D" uid="uid://hp21lyixrjk" path="res://sprites/victory_limbpunk.png" id="3_7a0ff"]
+[ext_resource type="Texture2D" uid="uid://bc11w4a1q502u" path="res://assets/title.png" id="4_8pgtc"]
+[ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="5_m17ij"]
+
+[node name="Vitoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4d62")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kt00q")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(605, 450.5)
+scale = Vector2(3.94, 3.96889)
+texture = ExtResource("3_7a0ff")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(581, 442)
+scale = Vector2(0.652396, 0.523939)
+texture = ExtResource("4_8pgtc")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -208.0
+offset_right = 120.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("5_m17ij")
+theme_override_font_sizes/font_size = 48
+text = " Restart "
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("5_m17ij")
+theme_override_font_sizes/font_size = 48
+text = "     Exit   "
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

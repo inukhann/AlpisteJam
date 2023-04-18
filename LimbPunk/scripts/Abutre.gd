@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 150
+var speed = 120
 @onready var can_attack = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

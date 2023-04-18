@@ -1,30 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtd6j2ntssr25"]
 
 [ext_resource type="Script" path="res://scripts/projetil.gd" id="1_yhorf"]
-[ext_resource type="Texture2D" uid="uid://bglj8nqedss2" path="res://sprites/gota toxica.png" id="2_vt60n"]
+[ext_resource type="Texture2D" path="res://sprites/gota toxica.png" id="2_jpu5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_213r1"]
-size = Vector2(12.8571, 10)
+size = Vector2(10, 10)
 
 [node name="Projetil" type="Area2D"]
-scale = Vector2(0.7, 0.7)
 collision_layer = 10
 script = ExtResource("1_yhorf")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 1)
+shape = SubResource("RectangleShape2D_213r1")
+
 [node name="ClearNode" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(1.42857, 7.15256e-07)
-scale = Vector2(0.714286, 0.571429)
+position = Vector2(-4.5, 1)
+scale = Vector2(0.55, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.85714, -1.19209e-07)
+position = Vector2(-3, 1)
 rotation = 1.5708
-scale = Vector2(0.758929, 0.669643)
-texture = ExtResource("2_vt60n")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.14285, 0.714285)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_213r1")
+scale = Vector2(0.608934, 0.515078)
+texture = ExtResource("2_jpu5m")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="ClearNode" to="." method="_on_clear_node_screen_exited"]

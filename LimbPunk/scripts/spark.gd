@@ -24,7 +24,7 @@ func _ready():
 	$Torso_Collision.set_disabled(true)
 	$Head_Collision.set_disabled(true)
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	change_status()
 	shoot_bullet()
 	move_character_x()
@@ -166,7 +166,7 @@ func detach_head():
 
 func gameover():
 	queue_free()
-	assert(get_tree().change_scene_to_file("res://scenes/fase_1.tscn") == OK)
+	assert(get_tree().reload_current_scene() == OK)
 
 
 func _on_fuel_timer_timeout():

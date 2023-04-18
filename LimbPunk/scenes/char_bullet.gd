@@ -3,7 +3,7 @@ extends CharacterBody2D
 var direction
 const SPEED = 400
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
 	
 func change_target(target, origin):

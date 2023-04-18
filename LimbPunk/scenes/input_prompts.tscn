@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3y0hfs4qbtni"]
+[gd_scene load_steps=7 format=3 uid="uid://dp2gaip42184v"]
 
 [ext_resource type="Texture2D" uid="uid://c4lx6g7cato6x" path="res://sprites/mouse1.png" id="1_0rayc"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="2_xgc7h"]
@@ -8,12 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://b4v5182qydxhd" path="res://sprites/e.png" id="6_re616"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 919.0
-offset_top = 604.0
-offset_right = 1019.0
-offset_bottom = 888.0
+offset_left = 1681.67
+offset_top = 1193.33
+offset_right = 1781.67
+offset_bottom = 1477.33
 
 [node name="MouseShoot" type="TextureRect" parent="GridContainer"]
 texture_filter = 1

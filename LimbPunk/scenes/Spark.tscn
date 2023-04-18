@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://deaj2dwrifxw5"]
+[gd_scene load_steps=8 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
 [ext_resource type="PackedScene" uid="uid://bobd3018ernbs" path="res://scenes/normal_sprite.tscn" id="2_fngcp"]
+[ext_resource type="PackedScene" uid="uid://dp2gaip42184v" path="res://scenes/input_prompts.tscn" id="3_k6auj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_668cv"]
 size = Vector2(16, 15)
@@ -52,6 +53,8 @@ shape = SubResource("RectangleShape2D_u3bwi")
 [node name="Head_Collision" type="CollisionShape2D" parent="."]
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_4bov1")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_k6auj")]
 
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
