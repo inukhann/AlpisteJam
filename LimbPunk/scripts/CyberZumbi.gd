@@ -4,6 +4,7 @@ extends CharacterBody2D
 var speed = 200
 var move_direction = 1
 var gravity = 10
+var canMove = false
 @onready var can_attack = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,8 +24,8 @@ func _physics_process(_delta):
 	velocity.normalized()
 	if !can_attack:
 		velocity = Vector2.ZERO
-	
-	move_and_slide()
+	if canMove:
+		move_and_slide()
 
 func _on_area_2d_body_entered(body):
 	if body.get_scene_file_path() == "res://scenes/Spark.tscn" and can_attack:
@@ -39,3 +40,7 @@ func _on_stun_timer_timeout():
 
 func _on_time_fx_timeout():
 	$passos.play()
+
+
+func _on_can_move_body_entered(_body):
+	canMove = true

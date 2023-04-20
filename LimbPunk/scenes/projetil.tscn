@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtd6j2ntssr25"]
 
 [ext_resource type="Script" path="res://scripts/projetil.gd" id="1_yhorf"]
-[ext_resource type="Texture2D" path="res://sprites/gota toxica.png" id="2_jpu5m"]
+[ext_resource type="Texture2D" uid="uid://bglj8nqedss2" path="res://sprites/gota toxica.png" id="2_jpu5m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_213r1"]
 size = Vector2(10, 10)

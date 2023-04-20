@@ -28,14 +28,6 @@ scale = Vector2(2, 2)
 collision_mask = 6
 script = ExtResource("1_35il2")
 
-[node name="Leg_Torso_Arm_Collision" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 2)
-shape = SubResource("RectangleShape2D_668cv")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2.668)
-position_smoothing_enabled = true
-
 [node name="Normal_Sprite" parent="." instance=ExtResource("2_fngcp")]
 
 [node name="Fuel_timer" type="Timer" parent="."]
@@ -43,12 +35,15 @@ wait_time = 8.0
 one_shot = true
 
 [node name="Dash_cooldown" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 one_shot = true
 
 [node name="Bullet_cooldown" type="Timer" parent="."]
-wait_time = 4.0
 one_shot = true
+
+[node name="Leg_Torso_Arm_Collision" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_668cv")
 
 [node name="Leg_Torso_Collision" type="CollisionShape2D" parent="."]
 position = Vector2(1.25, 0)
@@ -63,6 +58,7 @@ position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_4bov1")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_k6auj")]
+visible = false
 
 [node name="PernasFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_6r88o")
@@ -86,9 +82,23 @@ fill_mode = 1
 
 [node name="progressTime" type="Timer" parent="ProgressBar"]
 
+[node name="TimerMorte" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(30, -10)
+zoom = Vector2(1.8, 2.668)
+position_smoothing_enabled = true
+
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="Bullet_cooldown" to="." method="_on_bullet_cooldown_timeout"]
 [connection signal="timeout" from="ProgressBar/progressTime" to="." method="_on_progress_time_timeout"]
+[connection signal="timeout" from="TimerMorte" to="." method="_on_timer_morte_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
 
 [editable path="Normal_Sprite"]

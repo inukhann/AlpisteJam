@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://p0m5ch1kwnnr"]
 
 [ext_resource type="Script" path="res://scripts/cabeça.gd" id="1_f8gch"]
-[ext_resource type="Texture2D" path="res://sprites/aranha_limbpunk.png" id="2_tdwwl"]
+[ext_resource type="Texture2D" uid="uid://b5ffp4nviq0tx" path="res://sprites/aranha_limbpunk.png" id="2_tdwwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vobw0"]
-size = Vector2(487.5, 20)
+size = Vector2(491.5, 142.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw1av"]
 size = Vector2(28, 14)
@@ -19,7 +19,7 @@ collision_layer = 4
 script = ExtResource("1_f8gch")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 3.0
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -27,7 +27,7 @@ position = Vector2(228, 7)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-233.75, 0)
+position = Vector2(-230.5, -51.25)
 shape = SubResource("RectangleShape2D_vobw0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

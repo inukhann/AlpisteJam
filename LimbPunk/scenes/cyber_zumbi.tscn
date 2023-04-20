@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3eq82joidhug"]
+[gd_scene load_steps=7 format=3 uid="uid://d3eq82joidhug"]
 
 [ext_resource type="Script" path="res://scripts/CyberZumbi.gd" id="1_om1e7"]
 [ext_resource type="Texture2D" uid="uid://bly8riepmqpf5" path="res://sprites/zombie_limbpunk.png" id="2_xf4j8"]
@@ -9,6 +9,9 @@ size = Vector2(39, 85.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmuxo"]
 size = Vector2(45, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6r7b"]
+size = Vector2(993, 86)
 
 [node name="CyberZumbi" type="CharacterBody2D"]
 position = Vector2(605, 244)
@@ -27,6 +30,7 @@ target_position = Vector2(32, 1)
 collision_mask = 132
 
 [node name="Hitbox_raycast" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8.5, 19)
 shape = SubResource("RectangleShape2D_0b32q")
 
@@ -50,6 +54,13 @@ stream = ExtResource("3_vpb6c")
 wait_time = 6.34
 autostart = true
 
+[node name="CanMove" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanMove"]
+position = Vector2(55.5, 18)
+shape = SubResource("RectangleShape2D_u6r7b")
+
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Stun_timer" to="." method="_on_stun_timer_timeout"]
 [connection signal="timeout" from="TimeFX" to="." method="_on_time_fx_timeout"]
+[connection signal="body_entered" from="CanMove" to="." method="_on_can_move_body_entered"]
