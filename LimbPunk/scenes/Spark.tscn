@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://deaj2dwrifxw5"]
+[gd_scene load_steps=14 format=3 uid="uid://deaj2dwrifxw5"]
 
 [ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
 [ext_resource type="PackedScene" uid="uid://bobd3018ernbs" path="res://scenes/normal_sprite.tscn" id="2_fngcp"]
@@ -22,6 +22,9 @@ size = Vector2(9.5, 8)
 
 [sub_resource type="Theme" id="Theme_yfxjx"]
 default_font = ExtResource("7_j6xpe")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fq0ph"]
+size = Vector2(16, 1)
 
 [node name="Spark" type="CharacterBody2D"]
 scale = Vector2(2, 2)
@@ -94,11 +97,24 @@ offset = Vector2(30, -10)
 zoom = Vector2(1.8, 2.668)
 position_smoothing_enabled = true
 
+[node name="KillEnemy" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillEnemy"]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_fq0ph")
+
+[node name="TimerKillJump" type="Timer" parent="KillEnemy"]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="timeout" from="Fuel_timer" to="." method="_on_fuel_timer_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="Bullet_cooldown" to="." method="_on_bullet_cooldown_timeout"]
 [connection signal="timeout" from="ProgressBar/progressTime" to="." method="_on_progress_time_timeout"]
 [connection signal="timeout" from="TimerMorte" to="." method="_on_timer_morte_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
+[connection signal="body_entered" from="KillEnemy" to="." method="_on_kill_enemy_body_entered"]
+[connection signal="timeout" from="KillEnemy/TimerKillJump" to="." method="_on_timer_kill_jump_timeout"]
 
 [editable path="Normal_Sprite"]

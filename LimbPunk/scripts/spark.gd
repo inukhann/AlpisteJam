@@ -103,6 +103,8 @@ func move_character_y():
 			velocity.y = (velocity_mod_y * -BASE_VELOCITY_Y)
 		elif Input.is_action_just_released("JUMP") and velocity.y < - BASE_VELOCITY_Y * 0.1:
 			velocity.y = (velocity_mod_y * -BASE_VELOCITY_Y) * 0.1
+		elif Input.is_action_pressed("JUMP") and canJump:
+			velocity.y = (velocity_mod_y * -BASE_VELOCITY_Y)
 		else:
 			velocity.y += GRAVITY
 	else:
@@ -149,6 +151,7 @@ func detach_arms():
 		$Normal_Sprite/Torso/ArmLeft.hide()
 		$Normal_Sprite/Torso/ArmRight.hide()
 		$Normal_Sprite/AnimationPlayer.stop()
+		$KillEnemy.set_monitoring(false)
 
 func detach_legs():
 	if char_state == Status.NORMAL or char_state == Status.ARMLESS:
@@ -167,6 +170,7 @@ func detach_legs():
 		$Normal_Sprite/Torso/LegLeft.hide()
 		$Normal_Sprite/Torso/LegRight.hide()
 		$Normal_Sprite/AnimationPlayer.stop()
+		$KillEnemy.set_monitoring(false)
 
 func detach_head():
 	if char_state != Status.BODYLESS:
@@ -191,6 +195,7 @@ func detach_head():
 		$Normal_Sprite/Torso/Body.hide()
 		
 		$Normal_Sprite/AnimationPlayer.stop()
+		$KillEnemy.set_monitoring(false)
 		
 		$Fuel_timer.start()
 
@@ -240,3 +245,15 @@ func coyoteEffect():
 		canJump = true
 	elif canJump and $CoyoteTimer.is_stopped():
 		$CoyoteTimer.start()
+
+
+func _on_kill_enemy_body_entered(body):
+	canJump = true
+	velocity_mod_y *= 1.5
+	$KillEnemy/TimerKillJump.start()
+	body.queue_free()
+
+
+func _on_timer_kill_jump_timeout():
+	velocity_mod_y = 1
+	canJump = false
