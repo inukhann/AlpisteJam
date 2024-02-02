@@ -7,20 +7,15 @@
 size = Vector2(491.5, 142.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw1av"]
-size = Vector2(28, 14)
+size = Vector2(23, 1)
 
-<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ak2b8"]
 size = Vector2(28, 20)
-=======
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2mal"]
-size = Vector2(17, 18)
->>>>>>> Stashed changes
 
 [node name="Cabeça" type="CharacterBody2D"]
 position = Vector2(303, 245)
 scale = Vector2(2, 2)
-collision_layer = 4
+collision_layer = 2
 script = ExtResource("1_f8gch")
 
 [node name="Timer" type="Timer" parent="."]
@@ -39,30 +34,26 @@ position = Vector2(228, 12)
 texture = ExtResource("2_tdwwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(227, 10)
+position = Vector2(227, 5.5)
+rotation = 3.14159
 shape = SubResource("RectangleShape2D_bw1av")
-
-[node name="MorreDesgraça" type="Area2D" parent="."]
-position = Vector2(227.5, 12.5)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MorreDesgraça"]
-shape = SubResource("RectangleShape2D_ak2b8")
+one_way_collision = true
+one_way_collision_margin = 0.0
 
 [node name="spawn_shoot" type="Marker2D" parent="."]
 position = Vector2(212, 14)
 
-<<<<<<< Updated upstream
-=======
 [node name="KillPlayer" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillPlayer"]
 position = Vector2(227.5, 17)
 shape = SubResource("RectangleShape2D_a2mal")
 
->>>>>>> Stashed changes
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillPlayer"]
+position = Vector2(227, 12)
+shape = SubResource("RectangleShape2D_a2mal")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="MorreDesgraça" to="." method="_on_morre_desgraa_body_entered"]
+[connection signal="body_entered" from="KillPlayer" to="." method="_on_kill_player_body_entered"]

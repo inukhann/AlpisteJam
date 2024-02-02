@@ -12,10 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://2mogev8i5c2c" path="res://sprites/tile2.png" id="9_aw4kv"]
 [ext_resource type="Script" path="res://scripts/final_2.gd" id="10_jq3c1"]
 [ext_resource type="PackedScene" uid="uid://c3mx1cq3g37sd" path="res://scenes/faisca_1.tscn" id="11_rtjy4"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" uid="uid://q0pgp8itnkya" path="res://scenes/pause_menu.tscn" id="13_wranf"]
->>>>>>> Stashed changes
+
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1u60a"]
 texture = ExtResource("3_7ifry")
