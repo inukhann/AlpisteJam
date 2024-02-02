@@ -11,7 +11,7 @@ size = Vector2(39, 85.75)
 size = Vector2(45, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6r7b"]
-size = Vector2(993, 86)
+size = Vector2(1159, 307)
 
 [node name="CyberZumbi" type="CharacterBody2D"]
 position = Vector2(605, 244)
@@ -39,7 +39,6 @@ collision_layer = 0
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-visible = false
 position = Vector2(8.5, 19)
 shape = SubResource("RectangleShape2D_mmuxo")
 
@@ -57,7 +56,7 @@ autostart = true
 [node name="CanMove" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanMove"]
-position = Vector2(55.5, 18)
+position = Vector2(-27.5, -92.5)
 shape = SubResource("RectangleShape2D_u6r7b")
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]

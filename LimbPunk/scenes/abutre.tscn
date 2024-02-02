@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bd7j4sh3lv0wh" path="res://sprites/urubuzao.png" id="2_v1ihf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecf4e"]
-size = Vector2(117, 115)
+size = Vector2(68.5715, 61.4286)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j360m"]
-size = Vector2(119, 108)
+size = Vector2(68.5715, 61.4286)
 
 [node name="Abutre" type="CharacterBody2D"]
 position = Vector2(254, 109)
@@ -17,13 +17,14 @@ collision_mask = 4
 script = ExtResource("1_jyo83")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -0.5)
+position = Vector2(-17.1428, -23.5714)
+scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_ecf4e")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.714285, 1.42858)
-scale = Vector2(3.4375, 3.39286)
+scale = Vector2(4, 4)
 texture = ExtResource("2_v1ihf")
 
 [node name="hurtbox" type="Area2D" parent="."]
@@ -31,9 +32,9 @@ collision_layer = 0
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(1.5, 0)
+position = Vector2(-17.1428, -23.5714)
+scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_j360m")
-disabled = true
 
 [node name="Stun_cooldown" type="Timer" parent="."]
 wait_time = 3.0

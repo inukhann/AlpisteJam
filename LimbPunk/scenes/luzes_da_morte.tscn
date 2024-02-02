@@ -9,6 +9,7 @@ size = Vector2(15, 31)
 
 [node name="luzes_da_morte" type="Area2D"]
 position = Vector2(51, 5)
+scale = Vector2(2, 2)
 script = ExtResource("1_gpys1")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

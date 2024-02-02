@@ -33,6 +33,7 @@ func _ready():
 	$Normal_Sprite/Torso/LegLeft.show()
 	$Normal_Sprite/Torso/LegRight.show()
 	$Normal_Sprite/Torso/Body.show()
+
 	
 	
 func _physics_process(_delta):
@@ -210,6 +211,7 @@ func gameover():
 	char_state = Status.DEAD
 	$TimerMorte.start()
 	print("a")
+	get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 
 
 func _on_fuel_timer_timeout():
@@ -257,3 +259,6 @@ func _on_kill_enemy_body_entered(body):
 func _on_timer_kill_jump_timeout():
 	velocity_mod_y = 1
 	canJump = false
+	
+
+	

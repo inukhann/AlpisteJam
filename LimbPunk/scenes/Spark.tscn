@@ -61,7 +61,6 @@ position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_4bov1")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_k6auj")]
-visible = false
 
 [node name="PernasFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_6r88o")
@@ -73,10 +72,11 @@ stream = ExtResource("4_klc5f")
 stream = ExtResource("6_sp5jm")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -30.0
-offset_top = -29.5
-offset_right = 41.0
-offset_bottom = -9.5
+modulate = Color(1, 0.0823529, 0, 1)
+offset_left = -35.5
+offset_top = -36.0
+offset_right = 35.5
+offset_bottom = -16.0
 theme = SubResource("Theme_yfxjx")
 max_value = 8.0
 step = 1.0

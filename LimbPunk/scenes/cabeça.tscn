@@ -9,8 +9,8 @@ size = Vector2(491.5, 142.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw1av"]
 size = Vector2(23, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2mal"]
-size = Vector2(24, 15)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak2b8"]
+size = Vector2(28, 20)
 
 [node name="Cabeça" type="CharacterBody2D"]
 position = Vector2(303, 245)
@@ -22,7 +22,6 @@ script = ExtResource("1_f8gch")
 wait_time = 3.0
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 position = Vector2(228, 7)
 collision_layer = 4
 
@@ -45,6 +44,10 @@ one_way_collision_margin = 0.0
 position = Vector2(212, 14)
 
 [node name="KillPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillPlayer"]
+position = Vector2(227.5, 17)
+shape = SubResource("RectangleShape2D_a2mal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillPlayer"]
 position = Vector2(227, 12)

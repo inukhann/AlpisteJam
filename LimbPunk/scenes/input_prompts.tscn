@@ -12,10 +12,10 @@ scale = Vector2(0.6, 0.6)
 transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 1681.67
-offset_top = 1193.33
-offset_right = 1781.67
-offset_bottom = 1477.33
+offset_left = 1.66667
+offset_top = 1310.0
+offset_right = 101.667
+offset_bottom = 1594.0
 
 [node name="MouseShoot" type="TextureRect" parent="GridContainer"]
 texture_filter = 1
@@ -37,6 +37,7 @@ text = "Shoot"
 vertical_alignment = 1
 
 [node name="ShiftDash" type="TextureRect" parent="GridContainer"]
+visible = false
 texture_filter = 1
 layout_direction = 2
 layout_mode = 2
@@ -113,6 +114,7 @@ text = "Detach Head"
 vertical_alignment = 1
 
 [node name="EHead" type="TextureRect" parent="GridContainer"]
+visible = false
 texture_filter = 1
 layout_direction = 2
 layout_mode = 2
