@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://q0pgp8itnkya"]
 
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="1_byq0s"]
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_fg5gs"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_fg5gs")
 
 [node name="pausemenu" type="Control" parent="."]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
