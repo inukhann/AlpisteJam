@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://du83i35cn3m28"]
 
-[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_7tgjt"]
+[ext_resource type="Script" path="res://scripts/UI/options_menu.gd" id="1_7tgjt"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="2_s8pth"]
 
 [node name="Menu" type="Control"]

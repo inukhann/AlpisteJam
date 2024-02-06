@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://k2fs3jb0rimb"]
 
-[ext_resource type="Script" path="res://scripts/Abutre.gd" id="1_jyo83"]
-[ext_resource type="Texture2D" uid="uid://bd7j4sh3lv0wh" path="res://sprites/urubuzao.png" id="2_v1ihf"]
+[ext_resource type="Script" path="res://scripts/Enemy/Abutre.gd" id="1_jyo83"]
+[ext_resource type="Texture2D" uid="uid://bd7j4sh3lv0wh" path="res://sprites/Enemy/urubuzao.png" id="2_v1ihf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ecf4e"]
 size = Vector2(68.5715, 61.4286)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://deaj2dwrifxw5"]
 
-[ext_resource type="Script" path="res://scripts/spark.gd" id="1_35il2"]
+[ext_resource type="Script" path="res://scripts/Player/spark.gd" id="1_35il2"]
 [ext_resource type="PackedScene" uid="uid://bobd3018ernbs" path="res://scenes/normal_sprite.tscn" id="2_fngcp"]
 [ext_resource type="PackedScene" uid="uid://dp2gaip42184v" path="res://scenes/input_prompts.tscn" id="3_k6auj"]
 [ext_resource type="AudioStream" uid="uid://84do58ulg1dp" path="res://assets/SFX/meat_chop2.wav" id="4_6r88o"]

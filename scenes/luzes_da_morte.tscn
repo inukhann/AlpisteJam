@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/luzes_da_morte.gd" id="1_gpys1"]
 [ext_resource type="Texture2D" uid="uid://kmbebwnk5rc5" path="res://sprites/light (1).jpg" id="2_hl75d"]
-[ext_resource type="Texture2D" uid="uid://bs6prdu3ijse2" path="res://sprites/fios limbpunk (1).png" id="3_ergjs"]
+[ext_resource type="Texture2D" uid="uid://bs6prdu3ijse2" path="res://sprites/Enemy/Fios.png" id="3_ergjs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmrue"]
 size = Vector2(15, 31)

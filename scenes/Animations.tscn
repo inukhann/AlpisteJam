@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://bivtn770wsxur"]
 
-[ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/test_tile.png" id="1_pppil"]
-[ext_resource type="Texture2D" uid="uid://csnbnhnyswfgk" path="res://sprites/Spark/Head.png" id="2_wlvfd"]
-[ext_resource type="Texture2D" uid="uid://x5l7aepp6n6q" path="res://sprites/Spark/LegRight.png" id="3_niydu"]
-[ext_resource type="Texture2D" uid="uid://c5km6vghdwkhk" path="res://sprites/Spark/LegLeft.png" id="4_fux4d"]
-[ext_resource type="Texture2D" uid="uid://dr8ti388ukku5" path="res://sprites/Spark/ArmRight.png" id="5_oxnac"]
-[ext_resource type="Texture2D" uid="uid://c0jbl0lha34ip" path="res://sprites/Spark/ArmLeft.png" id="6_ecvac"]
-[ext_resource type="Texture2D" uid="uid://c6m81qfgfnxn3" path="res://sprites/Spark/Torso.png" id="7_poswm"]
+[ext_resource type="Texture2D" uid="uid://f4rm8jhpbwuv" path="res://sprites/Tileset/test_tile.png" id="1_pppil"]
+[ext_resource type="Texture2D" uid="uid://csnbnhnyswfgk" path="res://sprites/Player/Head.png" id="2_wlvfd"]
+[ext_resource type="Texture2D" uid="uid://x5l7aepp6n6q" path="res://sprites/Player/LegRight.png" id="3_niydu"]
+[ext_resource type="Texture2D" uid="uid://c5km6vghdwkhk" path="res://sprites/Player/LegLeft.png" id="4_fux4d"]
+[ext_resource type="Texture2D" uid="uid://dr8ti388ukku5" path="res://sprites/Player/ArmRight.png" id="5_oxnac"]
+[ext_resource type="Texture2D" uid="uid://c0jbl0lha34ip" path="res://sprites/Player/ArmLeft.png" id="6_ecvac"]
+[ext_resource type="Texture2D" uid="uid://c6m81qfgfnxn3" path="res://sprites/Player/Torso.png" id="7_poswm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71ib0"]
 size = Vector2(356, 20)

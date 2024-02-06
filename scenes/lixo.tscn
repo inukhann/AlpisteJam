@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmjfka4hvfxe6"]
 
-[ext_resource type="Script" path="res://scripts/lixo.gd" id="1_llk0o"]
-[ext_resource type="Texture2D" uid="uid://cv32552ej355x" path="res://sprites/poça xexelenta toxica.png" id="2_a56d3"]
+[ext_resource type="Script" path="res://scripts/Enemy/lixo.gd" id="1_llk0o"]
+[ext_resource type="Texture2D" uid="uid://cv32552ej355x" path="res://sprites/Enemy/ToxicPuddle.png" id="2_a56d3"]
 [ext_resource type="Texture2D" uid="uid://kmbebwnk5rc5" path="res://sprites/light (1).jpg" id="3_0dy7m"]
-[ext_resource type="Texture2D" uid="uid://dv22xilhf6s5d" path="res://sprites/zoio nojento.png" id="4_62qh3"]
+[ext_resource type="Texture2D" uid="uid://dv22xilhf6s5d" path="res://sprites/Enemy/zoio nojento.png" id="4_62qh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mha2n"]
 size = Vector2(339, 22)

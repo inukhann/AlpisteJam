@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3mx1cq3g37sd"]
 
-[ext_resource type="Script" path="res://scripts/faisca1.gd" id="1_nxfkh"]
+[ext_resource type="Script" path="res://scripts/Enemy/faisca1.gd" id="1_nxfkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7oco"]
 size = Vector2(20, 9)

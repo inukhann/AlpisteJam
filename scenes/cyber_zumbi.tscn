@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3eq82joidhug"]
 
-[ext_resource type="Script" path="res://scripts/CyberZumbi.gd" id="1_om1e7"]
-[ext_resource type="Texture2D" uid="uid://bly8riepmqpf5" path="res://sprites/zombie_limbpunk.png" id="2_xf4j8"]
+[ext_resource type="Script" path="res://scripts/Enemy/CyberZumbi.gd" id="1_om1e7"]
+[ext_resource type="Texture2D" uid="uid://bly8riepmqpf5" path="res://sprites/Enemy/zombie_limbpunk.png" id="2_xf4j8"]
 [ext_resource type="AudioStream" uid="uid://bwxrttwftv1j0" path="res://assets/SFX/steps.wav" id="3_vpb6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b32q"]

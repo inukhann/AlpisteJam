@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://deaj2dwrifxw5" path="res://scenes/Spark.tscn" id="1_m1app"]
 [ext_resource type="AudioStream" uid="uid://chf1nsi33n31h" path="res://assets/OST/Track1.wav" id="1_my1er"]
 [ext_resource type="PackedScene" uid="uid://cveik4dsau4rt" path="res://scenes/estruturas.tscn" id="2_wyaqm"]
-[ext_resource type="Texture2D" uid="uid://df7eqb7fa7se3" path="res://sprites/till1.png" id="3_7ifry"]
+[ext_resource type="Texture2D" uid="uid://df7eqb7fa7se3" path="res://sprites/Tileset/till1.png" id="3_7ifry"]
 [ext_resource type="PackedScene" uid="uid://cmjfka4hvfxe6" path="res://scenes/lixo.tscn" id="4_feud5"]
 [ext_resource type="PackedScene" uid="uid://74m0unkh7a2j" path="res://scenes/luzes_da_morte.tscn" id="5_ev6sq"]
 [ext_resource type="PackedScene" uid="uid://p0m5ch1kwnnr" path="res://scenes/cabeça.tscn" id="6_8i2wv"]
 [ext_resource type="PackedScene" uid="uid://d3eq82joidhug" path="res://scenes/cyber_zumbi.tscn" id="6_oce5y"]
-[ext_resource type="Texture2D" uid="uid://bknqnof74fk8f" path="res://sprites/mapa_2_fundo_limbpunk.png" id="8_4gb7s"]
-[ext_resource type="Texture2D" uid="uid://2mogev8i5c2c" path="res://sprites/tile2.png" id="9_aw4kv"]
-[ext_resource type="Script" path="res://scripts/final_2.gd" id="10_jq3c1"]
+[ext_resource type="Texture2D" uid="uid://bknqnof74fk8f" path="res://sprites/BG/mapa_2_fundo_limbpunk.png" id="8_4gb7s"]
+[ext_resource type="Texture2D" uid="uid://2mogev8i5c2c" path="res://sprites/Tileset/tile2.png" id="9_aw4kv"]
+[ext_resource type="Script" path="res://scripts/SceneManagement/final_2.gd" id="10_jq3c1"]
 [ext_resource type="PackedScene" uid="uid://c3mx1cq3g37sd" path="res://scenes/faisca_1.tscn" id="11_rtjy4"]
 
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgqi4oh7bptwt"]
 
-[ext_resource type="Script" path="res://scripts/gameover.gd" id="1_hbgxb"]
+[ext_resource type="Script" path="res://scripts/SceneManagement/gameover.gd" id="1_hbgxb"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="3_gefp0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oacqj"]

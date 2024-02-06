@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ivnlp8c8gsxh"]
 
-[ext_resource type="Script" path="res://scripts/Vitoria.gd" id="1_a4d62"]
+[ext_resource type="Script" path="res://scripts/SceneManagement/Vitoria.gd" id="1_a4d62"]
 [ext_resource type="AudioStream" uid="uid://xyk4n00124cc" path="res://assets/OST/Ending Theme.wav" id="2_kt00q"]
-[ext_resource type="Texture2D" uid="uid://hp21lyixrjk" path="res://sprites/victory_limbpunk.png" id="3_7a0ff"]
+[ext_resource type="Texture2D" uid="uid://hp21lyixrjk" path="res://sprites/UI/victory_limbpunk.png" id="3_7a0ff"]
 [ext_resource type="Texture2D" uid="uid://bc11w4a1q502u" path="res://assets/title.png" id="4_8pgtc"]
 [ext_resource type="FontFile" uid="uid://6fip03hax2k0" path="res://assets/Minecraft.ttf" id="5_m17ij"]
 

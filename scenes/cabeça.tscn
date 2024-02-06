@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://p0m5ch1kwnnr"]
 
-[ext_resource type="Script" path="res://scripts/cabeça.gd" id="1_f8gch"]
-[ext_resource type="Texture2D" uid="uid://b5ffp4nviq0tx" path="res://sprites/aranha_limbpunk.png" id="2_tdwwl"]
+[ext_resource type="Script" path="res://scripts/Player/cabeça.gd" id="1_f8gch"]
+[ext_resource type="Texture2D" uid="uid://b5ffp4nviq0tx" path="res://sprites/Enemy/aranha_limbpunk.png" id="2_tdwwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vobw0"]
 size = Vector2(491.5, 142.5)

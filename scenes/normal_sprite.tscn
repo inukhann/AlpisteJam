@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://bobd3018ernbs"]
 
-[ext_resource type="Texture2D" uid="uid://c5km6vghdwkhk" path="res://sprites/Spark/LegLeft.png" id="1_ar8ky"]
-[ext_resource type="Texture2D" uid="uid://x5l7aepp6n6q" path="res://sprites/Spark/LegRight.png" id="2_wot5m"]
-[ext_resource type="Texture2D" uid="uid://c0jbl0lha34ip" path="res://sprites/Spark/ArmLeft.png" id="3_vsmrw"]
-[ext_resource type="Texture2D" uid="uid://c6m81qfgfnxn3" path="res://sprites/Spark/Torso.png" id="4_qjjrp"]
-[ext_resource type="Texture2D" uid="uid://dr8ti388ukku5" path="res://sprites/Spark/ArmRight.png" id="5_cpsu6"]
-[ext_resource type="Texture2D" uid="uid://csnbnhnyswfgk" path="res://sprites/Spark/Head.png" id="6_odgx1"]
+[ext_resource type="Texture2D" uid="uid://c5km6vghdwkhk" path="res://sprites/Player/LegLeft.png" id="1_ar8ky"]
+[ext_resource type="Texture2D" uid="uid://x5l7aepp6n6q" path="res://sprites/Player/LegRight.png" id="2_wot5m"]
+[ext_resource type="Texture2D" uid="uid://c0jbl0lha34ip" path="res://sprites/Player/ArmLeft.png" id="3_vsmrw"]
+[ext_resource type="Texture2D" uid="uid://c6m81qfgfnxn3" path="res://sprites/Player/Torso.png" id="4_qjjrp"]
+[ext_resource type="Texture2D" uid="uid://dr8ti388ukku5" path="res://sprites/Player/ArmRight.png" id="5_cpsu6"]
+[ext_resource type="Texture2D" uid="uid://csnbnhnyswfgk" path="res://sprites/Player/Head.png" id="6_odgx1"]
 
 [sub_resource type="Animation" id="Animation_tcubv"]
 resource_name = "Idle"
